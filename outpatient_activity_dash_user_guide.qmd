@@ -1,0 +1,484 @@
+---
+title: "Power BI Planned Care Outpatient Activity Dashboard — User Guide"
+author: "John Cusack"
+date: 2026-06-05
+format: 
+  html:
+    embed-resources: true
+    page-layout: full
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    toc_float: true
+number-sections: true
+---
+
+# Planned Care Outpatient Activity Dashboard — User Guide
+
+## What is this tool?
+This dashboard brings together information about outpatient activity across the NHS South East region. It draws on data submitted by hospital providers and covers things like the number of appointments taking place, how many are attended, missed, or delivered remotely, and how specialist advice requests are being used.
+The tool is intended to help you explore activity patterns quickly — by organisation, by specialty, or over time — without needing to request a bespoke report.
+A few things worth knowing before you start:
+
+The data is updated monthly. There are two versions of each month's data: a live figure (more recent but subject to change) and a stable figure (slightly older but finalised). Most pages use the stable figure by default, and this is noted where relevant.
+The tool covers activity that has already taken place. It does not include plans, targets, or projections.
+Most pages exclude a specific type of activity — diagnostic medicine (coded as TFC 812) — from the main figures. This is standard practice and is noted where it applies.
+If you are unsure what a term means, there is a glossary at the end of this guide.
+
+## What do the measures show?
+
+Pages have different measures available, the following sections on measures give a listing of what is available in the tool as a whole, and what it represents. To see which measures are available on individual pages please refer to the section describing each page of the tool.
+
+## SUS activity measures
+
+### Attended count
+The number of outpatient appointments that patients attended, whether in person or remotely. 
+
+### First Appointment Count
+The number of appointments that were a patient's first, or only, appointment in a series. 
+
+### Attended First Appointment Count
+As First Appointment (above) but limited to appointments where the patient attended in time to be seen
+
+### Follow-up Appointment Count
+The number of appointments for patients attending following a first attendance or period of hospitalisation. 
+
+### Attended Follow Up Appointment Count
+As Follow Up Appointment (above) but limited to appointments where the patient attended in time to be seen
+
+### Follow-ups per First
+The ratio of attended follow-up appointments to attended first appointments. For example, a value of 2.5 means there are 2.5 follow-up appointments for every new patient seen.
+
+### DNA Count
+The number of appointments that patients did not attend and did not cancel in advance. 
+
+### Missed Appointment Rate
+The proportion of appointments that were missed (DNA) out of all appointments that should have taken place (attended plus missed, excluding those cancelled in advance). 
+
+### Face to Face Count
+The number of attended appointments delivered in person at a clinic or hospital site.
+
+### Attended Face to Face Count
+As Face to Face count, limited to appointments where the patient attended in time to be seen
+
+### Non Face to Face Count
+The number of attended appointments delivered remotely, for example by telephone or video.
+
+### Attended Face to Face Count
+As Non Face to Face count, limited to appointments where the patient attended in time for the appointment to take place
+
+### Proportion of Remote Attendances
+The share of attended appointments that were delivered non-face-to-face. 
+
+### Discharged Count
+The number of appointments where the recorded outcome was that the patient was discharged from the service — meaning they do not have a further follow-up booked through that referral.
+
+### Appointments Ending in Discharge
+The proportion of attended appointments where the outcome was discharge. 
+
+### Uncancelled Appointment Count
+The total number of appointments that were either attended or missed without prior cancellation. 
+
+## PIFU measures
+PIFU (Patient Initiated Follow-Up) data is reported by providers through the EROC data collection.
+
+### Moved and Discharged to PIFU Count
+The number of patients who were either moved onto or discharged to a PIFU pathway during the period. This means they have been taken off a regular follow-up schedule and given the ability to re-book themselves if needed.
+
+### PIFU Utilisation Rate
+The proportion of eligible attended first appointments where the patient was subsequently moved to or discharged onto a PIFU pathway. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity.
+
+## Specialist advice measures
+These measures relate to the Advice and Guidance (A&G) process, where referrers request specialist input before or after making a referral. Requests are split into pre-referral (advice before a referral is made) and post-referral (advice after a referral has already been submitted).
+
+### Pre-Referral Request Count / Post-Referral Request Count
+The total number of specialist advice requests received, split by whether they were made before or after referral. The combined total is shown in Total Referral Requests.
+
+### Total Referral Requests
+The total number of specialist advice requests received, regardless of whether they were pre- or post-referral.
+
+### Pre-Referral Processed Count / Post-Referral Processed Count
+The number of requests that have been completed and closed — meaning the specialist has responded and the request is no longer open. Requests that are still open or ongoing are not included.
+
+### Total Processed Count
+The combined total of all closed specialist advice requests, regardless of pre- or post-referral status.
+
+### Pre-Referral Diversions Count / Post-Referral Diversions Count
+The number of processed requests where the outcome was that the patient was returned to their referrer with advice.
+
+### Total Referral Diversions
+The combined total of all diversions, regardless of pre- or post-referral status.
+
+### Pre-Referral Diversion Rate / Post-Referral Diversion Rate
+The proportion of requests that resulted in a diversion, out of all requests submitted. Expressed as a percentage. 
+
+### Overall SA Diversion Rate
+The diversion rate across all specialist advice requests combined, regardless of pre- or post-referral status.
+
+### Overall SA Utilisation Rate
+The proportion of eligible first outpatient appointments where a specialist advice request had been submitted beforehand. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity, and is the same denominator used for the pre- and post-referral utilisation rates.
+
+### Pre-Referral Utilisation Rate / Post-Referral Utilisation Rate
+The utilisation rate broken down by whether the request was made before or after referral, using the same denominator as the overall rate.
+
+## e-Referral measures
+These measures are drawn from the NHS e-Referral Service and relate to the electronic management of referrals and advice requests.
+
+### A&G Received Count
+The number of Advice and Guidance requests received by a provider through the e-Referral Service.
+
+### A&G Response Count
+The number of responses to Advice and Guidance requests submitted by a provider. Comparing this to the received count gives an indication of how quickly or completely requests are being answered.
+
+### A&G Returned With Advice Count
+The number of A&G requests where the provider returned the request to the referrer with advice, rather than converting it to a referral. This is equivalent to a diversion in the EROC-based measures.
+
+### A&G Converted to Referral Count
+The number of A&G requests that were converted into a full referral — either by the provider or by the referrer following the specialist's advice. This represents requests where the advice pathway concluded that a referral was appropriate.
+
+### E-Referral Accepted Count
+The number of referrals accepted by the receiving organisation through the e-Referral Service.
+
+### E-Referral Rejected Count
+The number of referrals rejected by the receiving organisation. 
+
+### ASI Count
+The number of referrals that encountered an Appointment Slot Issue — meaning the patient could not be offered an appointment through the e-Referral system, typically because no slots were available.
+
+## Pages
+
+### Activity by Organisation
+
+#### What this page is for
+Use this page when you want to understand how activity levels have changed over time for a single organisation — either a provider trust or an ICB. It shows you a chosen measure month by month, split by financial year so you can compare the same months across years.
+
+#### Setting your filters
+Start by selecting the organisation you are interested in. You can filter by ICB first to narrow down to a group of providers, then select a specific Provider if you want to focus on one trust. If you leave the provider filter blank, the figures will reflect the South East region as a whole.
+Next, select a Treatment Function if you want to focus on a particular specialty. Leaving this blank will show all specialties combined.
+Finally, choose the metric you want to look at from the measure list. This controls what the chart and table display.
+
+#### What you are looking at
+There are two visuals on this page:
+
+- A line chart showing your chosen measure by month, with a separate line for each financial year. This makes it easy to spot whether activity in a given month is higher or lower than the same month in previous years.
+- A table showing the same figures in rows (months) and columns (financial years), which is useful if you want to note down or share specific numbers.
+
+#### Measures available for this page
+
+All SUS based measures exclude diagnostic medicine activity (TFC 812)
+
+- `Follow ups per first`
+- `Missed Appointment Rate`
+- `Proportion of remote attendances`
+- `Appointments ending in discharge`
+- `Attended Count`
+- `Discharged Count`
+- `DNA Count`
+- `Attended Face to Face Count`
+- `Attended First Appointment Count`
+- `Attended Follow up Appointment Count`
+- `Attended Non Face to Face Count`
+- `Uncancelled Appointment Count`
+- `Overall SA Diversion Rate`
+- `Overall SA Utilisation Rate`
+- `Pre Referral Diversion Rate`
+- `Pre Referral Utilisation Rate`
+- `Post Referral Diversion Rate`
+- `Post Referral Utilisation Rate`
+- `Move and Discharged to PIFU count`
+- `PIFU Utilisation Rate`
+
+#### Data note
+This page uses stable, finalised data only. The most recent one or two months may not appear here as they have not yet been finalised.
+
+### Activity by ICB
+
+#### What this page is for
+Use this page when you want to see how the providers within an ICB compare to each other over time for a chosen measure. Rather than looking at one organisation, this page splits activity out by provider so you can see who is contributing what to the overall picture.
+Setting your filters
+Select the ICB you want to focus on. You can then select a Treatment Function to narrow to a specialty if needed. Choose the metric you want to compare across providers.
+
+#### What you are looking at
+A line chart showing your chosen measure by month, with a separate line for each provider within the selected ICB. This allows you to see whether trends are consistent across providers or whether one or two are driving a pattern.
+A table showing the same figures in rows (months) and columns (financial years), aggregated to the ICB level.
+
+#### Measures available for this page
+
+All SUS based measures exclude diagnostic medicine activity (TFC 812)
+
+- `Follow ups per first`
+- `Missed Appointment Rate`
+- `Proportion of remote attendances`
+- `Appointments ending in discharge`
+- `Attended Count`
+- `Discharged Count`
+- `DNA Count`
+- `Attended Face to Face Count`
+- `Attended First Appointment Count`
+- `Attended Follow up Appointment Count`
+- `Attended Non Face to Face Count`
+- `Uncancelled Appointment Count`
+- `Overall SA Diversion Rate`
+- `Overall SA Utilisation Rate`
+- `Pre Referral Diversion Rate`
+- `Pre Referral Utilisation Rate`
+- `Post Referral Diversion Rate`
+- `Post Referral Utilisation Rate`
+- `Move and Discharged to PIFU count`
+- `PIFU Utilisation Rate`
+
+#### Data note
+As with the Activity by Organisation page, only finalised data is shown here.
+
+### Benchmarking — Latest Stable Position
+
+#### What this page is for
+Use this page when you want a snapshot of how all acute providers in the South East are performing across a standard set of measures in the most recent finalised month. This is the page to use if you want to identify which providers stand out — either as strong performers or as areas for follow-up.
+
+#### Setting your filters
+You can filter by Treatment Function, Age Group (children and young people, or adults), Appointment Priority, and whether the appointment involved a procedure. These filters apply across all the measures shown, so you can, for example, look at the benchmarking picture for adult cardiology appointments only.
+
+#### What you are looking at
+A single table showing one row per provider, grouped by ICB. The columns show a standard set of measures:
+
+- Specialist advice diversion rate (overall, and split by pre- and post-referral)
+- Specialist advice utilisation rate
+- Follow-up appointments per first appointment
+- Proportion of appointments delivered remotely
+- Missed appointment rate
+- Proportion of appointments ending in discharge
+- PIFU utilisation rate
+
+At the top of the page there are cards showing the date of the data being used for each data source, so you can see exactly which month you are looking at.
+
+#### Data note
+This page only shows acute trust providers. It uses finalised data only. Diagnostic medicine activity (TFC 812) is excluded from the SUS-based measures.
+
+### Benchmarking — Heat Map 
+
+#### What this page is for
+Use this page when you want to explore one benchmarking measure in detail across both providers and specialties at the same time. It is particularly useful for spotting whether a pattern at a provider is consistent across all their specialties, or concentrated in one area.
+
+#### Setting your filters
+Choose a single metric from the measure list — this controls what the table shows. You can also filter by Age Group, Appointment Priority, and procedure status.
+
+#### What you are looking at
+A table where the rows are treatment function groups (specialties) and the columns are providers. The values show your chosen measure for each combination. The colour shading helps you quickly identify where values are high or low across the grid.
+A card at the top shows the date of the data being displayed.
+
+#### Measures available on this page
+
+All SUS based measures exclude diagnostic medicine activity (TFC 812)
+
+- `Overall SA Diversion Rate`
+- `Overall SA Utilisation Rate`
+- `Missed Appointment Rate excl 812`
+- `Proportion of Remote Attendances excl 812`
+- `Appointments Ending in Discharge excl 812`
+- `Follow ups per first excl 812`
+- `PIFU Utilisation Rate` 
+
+#### Data note
+This page uses finalised data only and shows acute trusts only. A small number of broad "other" specialty groupings are excluded from the rows as they are not meaningful at this level of detail.
+
+### Activity by Weekday
+
+#### What this page is for
+Use this page when you want to understand how activity is distributed across days of the week for a particular organisation. This can be useful for understanding capacity patterns or identifying whether certain appointment types are concentrated on particular days.
+
+#### Setting your filters
+Select an ICB and/or Provider, and a Treatment Function if relevant. Select an Age Group if you want to focus on a particular patient group. Choose the metric you want to look at from the measure list. You can also filter to a specific month using the month filter.
+
+#### What you are looking at
+- A bar chart showing your chosen measure for each day of the week.
+- A table showing the same figures with providers in the rows and days of the week in the columns.
+
+#### Measures available on this page
+
+All SUS based measures exclude diagnostic medicine activity (TFC 812)
+
+- `Appointments ending in discharge`
+- `Attended Face to Face Count`
+- `Attended First Appointment Count`
+- `Attended Follow up Appointment Count`
+- `Attended Non Face to Face Count`
+- `Discharged Count`
+- `DNA Count`
+- `Face to Face Count`
+- `First Appointment Count`
+- `Follow up Appointment Count`
+- `Non Face to Face Count`
+- `Follow up per First`
+- `Missed Appointment Rate`
+- `Proportion of remote attendances`
+
+#### Data note
+Diagnostic medicine activity (TFC 812) is excluded from all measures on this page.
+
+### Attendance Breakdown
+
+#### What this page is for
+Use this page when you want to understand the composition of appointments — for example, what proportion were attended, missed, cancelled by the patient, or cancelled by the hospital. You can look at this broken down by month and split by whichever appointment characteristic is most relevant to your question.
+
+#### Setting your filters
+Select an ICB and/or Provider, a Treatment Function, and an Age Group if relevant. Select a Financial Year to focus the view. Use the Attribute filter to choose which characteristic you want to break the activity down by — for example, attendance type (attended, DNA, cancelled), appointment type (new or follow-up), contact type (face to face or remote), or outcome.
+
+#### What you are looking at
+A bar chart showing the count of activity by month, with bars divided by the characteristic you have selected.
+A table showing the same breakdown with months in the rows and the selected characteristic's categories in the columns.
+
+#### Selectable attributes
+Breakdowns are available for:
+
+- Attendance type
+- Appointment type
+- Contact type
+- Outcome
+
+#### Data note
+This page uses SUS data only. Diagnostic medicine activity (TFC 812) is excluded.
+
+### Month Comparison — Providers
+
+#### What this page is for
+Use this page when you want to compare how all providers in the region are performing for a single measure in the most recent period, and to see how that has changed from the previous month.
+
+#### Setting your filters
+Select a measure from the list on the left — you must select exactly one. You can also filter by Treatment Function, using a two-level list that shows specialty category and then individual specialty. Blank specialty codes are excluded automatically.
+
+#### What you are looking at
+A table with one row per acute provider, grouped by ICB. The columns show:
+
+- The live month figure (most recent available, but subject to revision)
+- The latest stable month figure (finalised)
+- The previous stable month figure
+- The variance between live and stable (how much the position has shifted)
+- The variance between the two stable months (the month-on-month change in finalised data)
+
+Two cards at the top show the dates corresponding to the live month and the stable month for the selected measure, so you know exactly what periods you are comparing.
+
+#### Measures available for this page
+
+All SUS based measures exclude diagnostic medicine activity (TFC 812)
+
+- `Follow ups per first`
+- `Missed Appointment Rate`
+- `Proportion of remote attendances`
+- `Appointments ending in discharge`
+- `Attended Count`
+- `Discharged Count`
+- `DNA Count`
+- `Attended Face to Face Count`
+- `Attended First Appointment Count`
+- `Attended Follow up Appointment Count`
+- `Attended Non Face to Face Count`
+- `Uncancelled Appointment Count`
+- `Overall SA Diversion Rate`
+- `Overall SA Utilisation Rate`
+- `Pre Referral Diversion Rate`
+- `Pre Referral Utilisation Rate`
+- `Post Referral Diversion Rate`
+- `Post Referral Utilisation Rate`
+- `Move and Discharged to PIFU count`
+- `PIFU Utilisation Rate`
+
+### Month Comparison — Treatment Functions
+
+#### What this page is for
+Use this page when you want to understand how a single provider is performing across different specialties for a chosen measure, and how that has changed recently.
+
+#### Setting your filters
+Select a measure from the list, and then select a Provider using the two-level list (which groups providers by ICB). You must select a single provider for this page to be useful.
+
+#### What you are looking at
+A table with one row per specialty group, showing the same live month, stable month, previous stable month, and variance columns as the Month Comparison — Providers page. This lets you quickly see whether a trend at provider level is driven by one specialty or is consistent across all areas.
+Cards at the top show the relevant data dates for the selected measure.
+
+#### Measures available for this page
+
+All SUS based measures exclude diagnostic medicine activity (TFC 812)
+
+- `Follow ups per first`
+- `Missed Appointment Rate`
+- `Proportion of remote attendances`
+- `Appointments ending in discharge`
+- `Attended Count`
+- `Discharged Count`
+- `DNA Count`
+- `Attended Face to Face Count`
+- `Attended First Appointment Count`
+- `Attended Follow up Appointment Count`
+- `Attended Non Face to Face Count`
+- `Uncancelled Appointment Count`
+- `Overall SA Diversion Rate`
+- `Overall SA Utilisation Rate`
+- `Pre Referral Diversion Rate`
+- `Pre Referral Utilisation Rate`
+- `Post Referral Diversion Rate`
+- `Post Referral Utilisation Rate`
+- `Move and Discharged to PIFU count`
+- `PIFU Utilisation Rate`
+
+### Month Comparison — Metric Overview
+
+#### What this page is for
+Use this page when you want to see the full picture for a single provider and specialty combination — all measures together — rather than focusing on one metric across many organisations. This is useful for a deeper dive into a specific area.
+
+#### Setting your filters
+Select a Provider and a Treatment Function. Both filters use two-level lists to help you navigate.
+
+#### What you are looking at
+A table with one row per measure, showing the same live, stable, previous stable, and variance columns as the other month comparison pages. This gives you a complete summary of where that provider and specialty stands right now and how it has moved.
+Three cards at the top show the stable month dates for SUS data, system EROC data, and PIFU data separately, since these data sources are finalised on slightly different timescales.
+
+## Glossary
+
+### Acute trust
+A hospital organisation providing secondary care services, as distinct from primary care (GP practices) or community services.
+
+### A&G / Specialist advice — Advice and Guidance. 
+A process by which a GP or other referrer can request clinical advice from a specialist without necessarily making a full referral. Requests can be pre-referral (before a patient is referred) or post-referral (after).
+
+### Attended appointment
+An appointment that the patient attended, whether face to face or remotely.
+
+### Diversion rate 
+The proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.
+
+### DNA 
+Did Not Attend. An appointment the patient missed without cancelling.
+
+### eRS / e-Referral Service 
+The NHS system used to manage referrals electronically between primary and secondary care.
+
+### EROC 
+Elective Recovery Outpatient Collection. A data submission collecting elective recovery activity. Split into provider submissions used in this tool for activity related to PIFU, and system submissions, used in this tool to give information about specialist advice activity 
+
+### ICB 
+Integrated Care Board. The organisation responsible for planning NHS services for a local population. 
+
+### Live / flex month 
+The most recent month of data available. These figures are provisional and may change as information can become available post submission and will be refined through subsequent submissions.
+
+### Missed appointment rate 
+The proportion of appointments that were not attended and not cancelled in advance. Calculated as DNAs divided by the total of attended and missed appointments.
+
+### PIFU 
+Patient Initiated Follow-Up. An arrangement where a patient is given the ability to access secondary care support if their condition changes, rather than being given a routine follow-up appointment.
+
+### Provider 
+In this context, an NHS organisation delivering hospital services, typically an acute trust.
+Stable / freeze month — a slightly earlier month of data that has been finalised and is no longer subject to change. Used as the primary reference point for benchmarking and comparison.
+
+### SUS 
+Secondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.
+
+### TFC 
+Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.
+
+### TFC 812 
+The treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.
+
+## Version History
+
+- 0.1 2026-06-05 John Cusack: Initial draft
