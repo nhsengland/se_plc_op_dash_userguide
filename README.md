@@ -1,30 +1,30 @@
 # Report Name
 
-**Status:** Active / Retired
+**Status:** Active
 
-**Latest Version:** v0.0.0
+**Latest Version:** v0.0.1
 
-**Transitioned to UDAL:** Y/N
+**Transitioned to UDAL:** NA
 
-**Mini team:** Which mini team produces the report
+**Mini team:** Planned Care
 
 **Subject area:** Specific subject area
 
-**Contact:** Who to contact with questions
+**Contact:** england.datasouth@nhs.net
 
 ## Overview
 
-**Purpose:** Describe what this report does
+**Purpose:** This repository hosts a user guide for the South East outpatient activity dashboard (formerly the demand management dashboard). 
 
-**Audience:** Describe who the report is for
+**Audience:** This guide is intended for operational colleagues who are accessing the outpatient activity dashboard and want to learn about the pages or individual measures within the tool
 
-**Frequency:** How often is it refreshed
+**Frequency:** The guide should be refreshed when changes are made to the outpatient activity dashboard that might affect the end user's experience
 
-**Output type:** Slides, excel, markdown, dashboard, etc.
+**Output type:** github pages site
 
 ## Data Sources
 
-Detail data sources included in this report.
+No external data sources, the repository contains a markdown file that forms the basis of the github pages site
 
 ## Quality Assurance, Standards and Reporting (QASAR)
 
