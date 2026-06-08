@@ -3,8 +3,7 @@ title: "Power BI Planned Care Outpatient Activity Dashboard — User Guide"
 author: "John Cusack"
 date: 2026-06-05
 format: 
-  html:
-    embed-resources: true
+  html:    
     page-layout: full
     toc: true
     toc-depth: 4
