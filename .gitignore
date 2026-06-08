@@ -3,8 +3,6 @@
 **/.pbi/cache.abf
 
 # config files
-*.yml
-*.yaml
 config
 
 # History files

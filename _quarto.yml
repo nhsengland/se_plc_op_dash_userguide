@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: South East Outpatient Activity Dashboard Userguide
+
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    toc-float: true
+    page-layout: full
+    number-sections: true
