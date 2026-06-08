@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.543">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Cusack">
+<meta name="dcterms.date" content="2026-06-08">
+
+<title>South East Outpatient Activity Dashboard Userguide - Power BI Planned Care Outpatient Activity Dashboard — User Guide</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#planned-care-outpatient-activity-dashboard-user-guide" id="toc-planned-care-outpatient-activity-dashboard-user-guide" class="nav-link active" data-scroll-target="#planned-care-outpatient-activity-dashboard-user-guide"><span class="header-section-number">1</span> Planned Care Outpatient Activity Dashboard — User Guide</a>
+  <ul>
+  <li><a href="#what-is-this-tool" id="toc-what-is-this-tool" class="nav-link" data-scroll-target="#what-is-this-tool"><span class="header-section-number">1.1</span> What is this tool?</a></li>
+  <li><a href="#what-do-the-measures-show" id="toc-what-do-the-measures-show" class="nav-link" data-scroll-target="#what-do-the-measures-show"><span class="header-section-number">1.2</span> What do the measures show?</a></li>
+  <li><a href="#sus-activity-measures" id="toc-sus-activity-measures" class="nav-link" data-scroll-target="#sus-activity-measures"><span class="header-section-number">1.3</span> SUS activity measures</a>
+  <ul class="collapse">
+  <li><a href="#attended-count" id="toc-attended-count" class="nav-link" data-scroll-target="#attended-count"><span class="header-section-number">1.3.1</span> Attended count</a></li>
+  <li><a href="#first-appointment-count" id="toc-first-appointment-count" class="nav-link" data-scroll-target="#first-appointment-count"><span class="header-section-number">1.3.2</span> First Appointment Count</a></li>
+  <li><a href="#attended-first-appointment-count" id="toc-attended-first-appointment-count" class="nav-link" data-scroll-target="#attended-first-appointment-count"><span class="header-section-number">1.3.3</span> Attended First Appointment Count</a></li>
+  <li><a href="#follow-up-appointment-count" id="toc-follow-up-appointment-count" class="nav-link" data-scroll-target="#follow-up-appointment-count"><span class="header-section-number">1.3.4</span> Follow-up Appointment Count</a></li>
+  <li><a href="#attended-follow-up-appointment-count" id="toc-attended-follow-up-appointment-count" class="nav-link" data-scroll-target="#attended-follow-up-appointment-count"><span class="header-section-number">1.3.5</span> Attended Follow Up Appointment Count</a></li>
+  <li><a href="#follow-ups-per-first" id="toc-follow-ups-per-first" class="nav-link" data-scroll-target="#follow-ups-per-first"><span class="header-section-number">1.3.6</span> Follow-ups per First</a></li>
+  <li><a href="#dna-count" id="toc-dna-count" class="nav-link" data-scroll-target="#dna-count"><span class="header-section-number">1.3.7</span> DNA Count</a></li>
+  <li><a href="#missed-appointment-rate" id="toc-missed-appointment-rate" class="nav-link" data-scroll-target="#missed-appointment-rate"><span class="header-section-number">1.3.8</span> Missed Appointment Rate</a></li>
+  <li><a href="#face-to-face-count" id="toc-face-to-face-count" class="nav-link" data-scroll-target="#face-to-face-count"><span class="header-section-number">1.3.9</span> Face to Face Count</a></li>
+  <li><a href="#attended-face-to-face-count" id="toc-attended-face-to-face-count" class="nav-link" data-scroll-target="#attended-face-to-face-count"><span class="header-section-number">1.3.10</span> Attended Face to Face Count</a></li>
+  <li><a href="#non-face-to-face-count" id="toc-non-face-to-face-count" class="nav-link" data-scroll-target="#non-face-to-face-count"><span class="header-section-number">1.3.11</span> Non Face to Face Count</a></li>
+  <li><a href="#attended-face-to-face-count-1" id="toc-attended-face-to-face-count-1" class="nav-link" data-scroll-target="#attended-face-to-face-count-1"><span class="header-section-number">1.3.12</span> Attended Face to Face Count</a></li>
+  <li><a href="#proportion-of-remote-attendances" id="toc-proportion-of-remote-attendances" class="nav-link" data-scroll-target="#proportion-of-remote-attendances"><span class="header-section-number">1.3.13</span> Proportion of Remote Attendances</a></li>
+  <li><a href="#discharged-count" id="toc-discharged-count" class="nav-link" data-scroll-target="#discharged-count"><span class="header-section-number">1.3.14</span> Discharged Count</a></li>
+  <li><a href="#appointments-ending-in-discharge" id="toc-appointments-ending-in-discharge" class="nav-link" data-scroll-target="#appointments-ending-in-discharge"><span class="header-section-number">1.3.15</span> Appointments Ending in Discharge</a></li>
+  <li><a href="#uncancelled-appointment-count" id="toc-uncancelled-appointment-count" class="nav-link" data-scroll-target="#uncancelled-appointment-count"><span class="header-section-number">1.3.16</span> Uncancelled Appointment Count</a></li>
+  </ul></li>
+  <li><a href="#pifu-measures" id="toc-pifu-measures" class="nav-link" data-scroll-target="#pifu-measures"><span class="header-section-number">1.4</span> PIFU measures</a>
+  <ul class="collapse">
+  <li><a href="#moved-and-discharged-to-pifu-count" id="toc-moved-and-discharged-to-pifu-count" class="nav-link" data-scroll-target="#moved-and-discharged-to-pifu-count"><span class="header-section-number">1.4.1</span> Moved and Discharged to PIFU Count</a></li>
+  <li><a href="#pifu-utilisation-rate" id="toc-pifu-utilisation-rate" class="nav-link" data-scroll-target="#pifu-utilisation-rate"><span class="header-section-number">1.4.2</span> PIFU Utilisation Rate</a></li>
+  </ul></li>
+  <li><a href="#specialist-advice-measures" id="toc-specialist-advice-measures" class="nav-link" data-scroll-target="#specialist-advice-measures"><span class="header-section-number">1.5</span> Specialist advice measures</a>
+  <ul class="collapse">
+  <li><a href="#pre-referral-request-count-post-referral-request-count" id="toc-pre-referral-request-count-post-referral-request-count" class="nav-link" data-scroll-target="#pre-referral-request-count-post-referral-request-count"><span class="header-section-number">1.5.1</span> Pre-Referral Request Count / Post-Referral Request Count</a></li>
+  <li><a href="#total-referral-requests" id="toc-total-referral-requests" class="nav-link" data-scroll-target="#total-referral-requests"><span class="header-section-number">1.5.2</span> Total Referral Requests</a></li>
+  <li><a href="#pre-referral-processed-count-post-referral-processed-count" id="toc-pre-referral-processed-count-post-referral-processed-count" class="nav-link" data-scroll-target="#pre-referral-processed-count-post-referral-processed-count"><span class="header-section-number">1.5.3</span> Pre-Referral Processed Count / Post-Referral Processed Count</a></li>
+  <li><a href="#total-processed-count" id="toc-total-processed-count" class="nav-link" data-scroll-target="#total-processed-count"><span class="header-section-number">1.5.4</span> Total Processed Count</a></li>
+  <li><a href="#pre-referral-diversions-count-post-referral-diversions-count" id="toc-pre-referral-diversions-count-post-referral-diversions-count" class="nav-link" data-scroll-target="#pre-referral-diversions-count-post-referral-diversions-count"><span class="header-section-number">1.5.5</span> Pre-Referral Diversions Count / Post-Referral Diversions Count</a></li>
+  <li><a href="#total-referral-diversions" id="toc-total-referral-diversions" class="nav-link" data-scroll-target="#total-referral-diversions"><span class="header-section-number">1.5.6</span> Total Referral Diversions</a></li>
+  <li><a href="#pre-referral-diversion-rate-post-referral-diversion-rate" id="toc-pre-referral-diversion-rate-post-referral-diversion-rate" class="nav-link" data-scroll-target="#pre-referral-diversion-rate-post-referral-diversion-rate"><span class="header-section-number">1.5.7</span> Pre-Referral Diversion Rate / Post-Referral Diversion Rate</a></li>
+  <li><a href="#overall-sa-diversion-rate" id="toc-overall-sa-diversion-rate" class="nav-link" data-scroll-target="#overall-sa-diversion-rate"><span class="header-section-number">1.5.8</span> Overall SA Diversion Rate</a></li>
+  <li><a href="#overall-sa-utilisation-rate" id="toc-overall-sa-utilisation-rate" class="nav-link" data-scroll-target="#overall-sa-utilisation-rate"><span class="header-section-number">1.5.9</span> Overall SA Utilisation Rate</a></li>
+  <li><a href="#pre-referral-utilisation-rate-post-referral-utilisation-rate" id="toc-pre-referral-utilisation-rate-post-referral-utilisation-rate" class="nav-link" data-scroll-target="#pre-referral-utilisation-rate-post-referral-utilisation-rate"><span class="header-section-number">1.5.10</span> Pre-Referral Utilisation Rate / Post-Referral Utilisation Rate</a></li>
+  </ul></li>
+  <li><a href="#e-referral-measures" id="toc-e-referral-measures" class="nav-link" data-scroll-target="#e-referral-measures"><span class="header-section-number">1.6</span> e-Referral measures</a>
+  <ul class="collapse">
+  <li><a href="#ag-received-count" id="toc-ag-received-count" class="nav-link" data-scroll-target="#ag-received-count"><span class="header-section-number">1.6.1</span> A&amp;G Received Count</a></li>
+  <li><a href="#ag-response-count" id="toc-ag-response-count" class="nav-link" data-scroll-target="#ag-response-count"><span class="header-section-number">1.6.2</span> A&amp;G Response Count</a></li>
+  <li><a href="#ag-returned-with-advice-count" id="toc-ag-returned-with-advice-count" class="nav-link" data-scroll-target="#ag-returned-with-advice-count"><span class="header-section-number">1.6.3</span> A&amp;G Returned With Advice Count</a></li>
+  <li><a href="#ag-converted-to-referral-count" id="toc-ag-converted-to-referral-count" class="nav-link" data-scroll-target="#ag-converted-to-referral-count"><span class="header-section-number">1.6.4</span> A&amp;G Converted to Referral Count</a></li>
+  <li><a href="#e-referral-accepted-count" id="toc-e-referral-accepted-count" class="nav-link" data-scroll-target="#e-referral-accepted-count"><span class="header-section-number">1.6.5</span> E-Referral Accepted Count</a></li>
+  <li><a href="#e-referral-rejected-count" id="toc-e-referral-rejected-count" class="nav-link" data-scroll-target="#e-referral-rejected-count"><span class="header-section-number">1.6.6</span> E-Referral Rejected Count</a></li>
+  <li><a href="#asi-count" id="toc-asi-count" class="nav-link" data-scroll-target="#asi-count"><span class="header-section-number">1.6.7</span> ASI Count</a></li>
+  </ul></li>
+  <li><a href="#pages" id="toc-pages" class="nav-link" data-scroll-target="#pages"><span class="header-section-number">1.7</span> Pages</a>
+  <ul class="collapse">
+  <li><a href="#activity-by-organisation" id="toc-activity-by-organisation" class="nav-link" data-scroll-target="#activity-by-organisation"><span class="header-section-number">1.7.1</span> Activity by Organisation</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for" id="toc-what-this-page-is-for" class="nav-link" data-scroll-target="#what-this-page-is-for"><span class="header-section-number">1.7.1.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters" id="toc-setting-your-filters" class="nav-link" data-scroll-target="#setting-your-filters"><span class="header-section-number">1.7.1.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at" id="toc-what-you-are-looking-at" class="nav-link" data-scroll-target="#what-you-are-looking-at"><span class="header-section-number">1.7.1.3</span> What you are looking at</a></li>
+  <li><a href="#measures-available-for-this-page" id="toc-measures-available-for-this-page" class="nav-link" data-scroll-target="#measures-available-for-this-page"><span class="header-section-number">1.7.1.4</span> Measures available for this page</a></li>
+  <li><a href="#data-note" id="toc-data-note" class="nav-link" data-scroll-target="#data-note"><span class="header-section-number">1.7.1.5</span> Data note</a></li>
+  </ul></li>
+  <li><a href="#activity-by-icb" id="toc-activity-by-icb" class="nav-link" data-scroll-target="#activity-by-icb"><span class="header-section-number">1.7.2</span> Activity by ICB</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-1" id="toc-what-this-page-is-for-1" class="nav-link" data-scroll-target="#what-this-page-is-for-1"><span class="header-section-number">1.7.2.1</span> What this page is for</a></li>
+  <li><a href="#what-you-are-looking-at-1" id="toc-what-you-are-looking-at-1" class="nav-link" data-scroll-target="#what-you-are-looking-at-1"><span class="header-section-number">1.7.2.2</span> What you are looking at</a></li>
+  <li><a href="#measures-available-for-this-page-1" id="toc-measures-available-for-this-page-1" class="nav-link" data-scroll-target="#measures-available-for-this-page-1"><span class="header-section-number">1.7.2.3</span> Measures available for this page</a></li>
+  <li><a href="#data-note-1" id="toc-data-note-1" class="nav-link" data-scroll-target="#data-note-1"><span class="header-section-number">1.7.2.4</span> Data note</a></li>
+  </ul></li>
+  <li><a href="#benchmarking-latest-stable-position" id="toc-benchmarking-latest-stable-position" class="nav-link" data-scroll-target="#benchmarking-latest-stable-position"><span class="header-section-number">1.7.3</span> Benchmarking — Latest Stable Position</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-2" id="toc-what-this-page-is-for-2" class="nav-link" data-scroll-target="#what-this-page-is-for-2"><span class="header-section-number">1.7.3.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-1" id="toc-setting-your-filters-1" class="nav-link" data-scroll-target="#setting-your-filters-1"><span class="header-section-number">1.7.3.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-2" id="toc-what-you-are-looking-at-2" class="nav-link" data-scroll-target="#what-you-are-looking-at-2"><span class="header-section-number">1.7.3.3</span> What you are looking at</a></li>
+  <li><a href="#data-note-2" id="toc-data-note-2" class="nav-link" data-scroll-target="#data-note-2"><span class="header-section-number">1.7.3.4</span> Data note</a></li>
+  </ul></li>
+  <li><a href="#benchmarking-heat-map" id="toc-benchmarking-heat-map" class="nav-link" data-scroll-target="#benchmarking-heat-map"><span class="header-section-number">1.7.4</span> Benchmarking — Heat Map</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-3" id="toc-what-this-page-is-for-3" class="nav-link" data-scroll-target="#what-this-page-is-for-3"><span class="header-section-number">1.7.4.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-2" id="toc-setting-your-filters-2" class="nav-link" data-scroll-target="#setting-your-filters-2"><span class="header-section-number">1.7.4.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-3" id="toc-what-you-are-looking-at-3" class="nav-link" data-scroll-target="#what-you-are-looking-at-3"><span class="header-section-number">1.7.4.3</span> What you are looking at</a></li>
+  <li><a href="#measures-available-on-this-page" id="toc-measures-available-on-this-page" class="nav-link" data-scroll-target="#measures-available-on-this-page"><span class="header-section-number">1.7.4.4</span> Measures available on this page</a></li>
+  <li><a href="#data-note-3" id="toc-data-note-3" class="nav-link" data-scroll-target="#data-note-3"><span class="header-section-number">1.7.4.5</span> Data note</a></li>
+  </ul></li>
+  <li><a href="#activity-by-weekday" id="toc-activity-by-weekday" class="nav-link" data-scroll-target="#activity-by-weekday"><span class="header-section-number">1.7.5</span> Activity by Weekday</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-4" id="toc-what-this-page-is-for-4" class="nav-link" data-scroll-target="#what-this-page-is-for-4"><span class="header-section-number">1.7.5.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-3" id="toc-setting-your-filters-3" class="nav-link" data-scroll-target="#setting-your-filters-3"><span class="header-section-number">1.7.5.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-4" id="toc-what-you-are-looking-at-4" class="nav-link" data-scroll-target="#what-you-are-looking-at-4"><span class="header-section-number">1.7.5.3</span> What you are looking at</a></li>
+  <li><a href="#measures-available-on-this-page-1" id="toc-measures-available-on-this-page-1" class="nav-link" data-scroll-target="#measures-available-on-this-page-1"><span class="header-section-number">1.7.5.4</span> Measures available on this page</a></li>
+  <li><a href="#data-note-4" id="toc-data-note-4" class="nav-link" data-scroll-target="#data-note-4"><span class="header-section-number">1.7.5.5</span> Data note</a></li>
+  </ul></li>
+  <li><a href="#attendance-breakdown" id="toc-attendance-breakdown" class="nav-link" data-scroll-target="#attendance-breakdown"><span class="header-section-number">1.7.6</span> Attendance Breakdown</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-5" id="toc-what-this-page-is-for-5" class="nav-link" data-scroll-target="#what-this-page-is-for-5"><span class="header-section-number">1.7.6.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-4" id="toc-setting-your-filters-4" class="nav-link" data-scroll-target="#setting-your-filters-4"><span class="header-section-number">1.7.6.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-5" id="toc-what-you-are-looking-at-5" class="nav-link" data-scroll-target="#what-you-are-looking-at-5"><span class="header-section-number">1.7.6.3</span> What you are looking at</a></li>
+  <li><a href="#selectable-attributes" id="toc-selectable-attributes" class="nav-link" data-scroll-target="#selectable-attributes"><span class="header-section-number">1.7.6.4</span> Selectable attributes</a></li>
+  <li><a href="#data-note-5" id="toc-data-note-5" class="nav-link" data-scroll-target="#data-note-5"><span class="header-section-number">1.7.6.5</span> Data note</a></li>
+  </ul></li>
+  <li><a href="#month-comparison-providers" id="toc-month-comparison-providers" class="nav-link" data-scroll-target="#month-comparison-providers"><span class="header-section-number">1.7.7</span> Month Comparison — Providers</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-6" id="toc-what-this-page-is-for-6" class="nav-link" data-scroll-target="#what-this-page-is-for-6"><span class="header-section-number">1.7.7.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-5" id="toc-setting-your-filters-5" class="nav-link" data-scroll-target="#setting-your-filters-5"><span class="header-section-number">1.7.7.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-6" id="toc-what-you-are-looking-at-6" class="nav-link" data-scroll-target="#what-you-are-looking-at-6"><span class="header-section-number">1.7.7.3</span> What you are looking at</a></li>
+  <li><a href="#measures-available-for-this-page-2" id="toc-measures-available-for-this-page-2" class="nav-link" data-scroll-target="#measures-available-for-this-page-2"><span class="header-section-number">1.7.7.4</span> Measures available for this page</a></li>
+  </ul></li>
+  <li><a href="#month-comparison-treatment-functions" id="toc-month-comparison-treatment-functions" class="nav-link" data-scroll-target="#month-comparison-treatment-functions"><span class="header-section-number">1.7.8</span> Month Comparison — Treatment Functions</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-7" id="toc-what-this-page-is-for-7" class="nav-link" data-scroll-target="#what-this-page-is-for-7"><span class="header-section-number">1.7.8.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-6" id="toc-setting-your-filters-6" class="nav-link" data-scroll-target="#setting-your-filters-6"><span class="header-section-number">1.7.8.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-7" id="toc-what-you-are-looking-at-7" class="nav-link" data-scroll-target="#what-you-are-looking-at-7"><span class="header-section-number">1.7.8.3</span> What you are looking at</a></li>
+  <li><a href="#measures-available-for-this-page-3" id="toc-measures-available-for-this-page-3" class="nav-link" data-scroll-target="#measures-available-for-this-page-3"><span class="header-section-number">1.7.8.4</span> Measures available for this page</a></li>
+  </ul></li>
+  <li><a href="#month-comparison-metric-overview" id="toc-month-comparison-metric-overview" class="nav-link" data-scroll-target="#month-comparison-metric-overview"><span class="header-section-number">1.7.9</span> Month Comparison — Metric Overview</a>
+  <ul class="collapse">
+  <li><a href="#what-this-page-is-for-8" id="toc-what-this-page-is-for-8" class="nav-link" data-scroll-target="#what-this-page-is-for-8"><span class="header-section-number">1.7.9.1</span> What this page is for</a></li>
+  <li><a href="#setting-your-filters-7" id="toc-setting-your-filters-7" class="nav-link" data-scroll-target="#setting-your-filters-7"><span class="header-section-number">1.7.9.2</span> Setting your filters</a></li>
+  <li><a href="#what-you-are-looking-at-8" id="toc-what-you-are-looking-at-8" class="nav-link" data-scroll-target="#what-you-are-looking-at-8"><span class="header-section-number">1.7.9.3</span> What you are looking at</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><span class="header-section-number">1.8</span> Glossary</a>
+  <ul class="collapse">
+  <li><a href="#acute-trust" id="toc-acute-trust" class="nav-link" data-scroll-target="#acute-trust"><span class="header-section-number">1.8.1</span> Acute trust</a></li>
+  <li><a href="#ag-specialist-advice-advice-and-guidance." id="toc-ag-specialist-advice-advice-and-guidance." class="nav-link" data-scroll-target="#ag-specialist-advice-advice-and-guidance."><span class="header-section-number">1.8.2</span> A&amp;G / Specialist advice — Advice and Guidance.</a></li>
+  <li><a href="#attended-appointment" id="toc-attended-appointment" class="nav-link" data-scroll-target="#attended-appointment"><span class="header-section-number">1.8.3</span> Attended appointment</a></li>
+  <li><a href="#diversion-rate" id="toc-diversion-rate" class="nav-link" data-scroll-target="#diversion-rate"><span class="header-section-number">1.8.4</span> Diversion rate</a></li>
+  <li><a href="#dna" id="toc-dna" class="nav-link" data-scroll-target="#dna"><span class="header-section-number">1.8.5</span> DNA</a></li>
+  <li><a href="#ers-e-referral-service" id="toc-ers-e-referral-service" class="nav-link" data-scroll-target="#ers-e-referral-service"><span class="header-section-number">1.8.6</span> eRS / e-Referral Service</a></li>
+  <li><a href="#eroc" id="toc-eroc" class="nav-link" data-scroll-target="#eroc"><span class="header-section-number">1.8.7</span> EROC</a></li>
+  <li><a href="#icb" id="toc-icb" class="nav-link" data-scroll-target="#icb"><span class="header-section-number">1.8.8</span> ICB</a></li>
+  <li><a href="#live-flex-month" id="toc-live-flex-month" class="nav-link" data-scroll-target="#live-flex-month"><span class="header-section-number">1.8.9</span> Live / flex month</a></li>
+  <li><a href="#missed-appointment-rate-1" id="toc-missed-appointment-rate-1" class="nav-link" data-scroll-target="#missed-appointment-rate-1"><span class="header-section-number">1.8.10</span> Missed appointment rate</a></li>
+  <li><a href="#pifu" id="toc-pifu" class="nav-link" data-scroll-target="#pifu"><span class="header-section-number">1.8.11</span> PIFU</a></li>
+  <li><a href="#provider" id="toc-provider" class="nav-link" data-scroll-target="#provider"><span class="header-section-number">1.8.12</span> Provider</a></li>
+  <li><a href="#sus" id="toc-sus" class="nav-link" data-scroll-target="#sus"><span class="header-section-number">1.8.13</span> SUS</a></li>
+  <li><a href="#tfc" id="toc-tfc" class="nav-link" data-scroll-target="#tfc"><span class="header-section-number">1.8.14</span> TFC</a></li>
+  <li><a href="#tfc-812" id="toc-tfc-812" class="nav-link" data-scroll-target="#tfc-812"><span class="header-section-number">1.8.15</span> TFC 812</a></li>
+  </ul></li>
+  <li><a href="#version-history" id="toc-version-history" class="nav-link" data-scroll-target="#version-history"><span class="header-section-number">1.9</span> Version History</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Power BI Planned Care Outpatient Activity Dashboard — User Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John Cusack </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 8, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="planned-care-outpatient-activity-dashboard-user-guide" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Planned Care Outpatient Activity Dashboard — User Guide</h1>
+<section id="what-is-this-tool" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-this-tool"><span class="header-section-number">1.1</span> What is this tool?</h2>
+<p>This dashboard brings together information about outpatient activity across the NHS South East region. It draws on data submitted by hospital providers and covers things like the number of appointments taking place, how many are attended, missed, or delivered remotely, and how specialist advice requests are being used. The tool is intended to help you explore activity patterns quickly — by organisation, by specialty, or over time — without needing to request a bespoke report. A few things worth knowing before you start:</p>
+<p>The data is updated monthly. There are two versions of each month’s data: a live figure (more recent but subject to change) and a stable figure (slightly older but finalised). Most pages use the stable figure by default, and this is noted where relevant. The tool covers activity that has already taken place. It does not include plans, targets, or projections. Most pages exclude a specific type of activity — diagnostic medicine (coded as TFC 812) — from the main figures. This is standard practice and is noted where it applies. If you are unsure what a term means, there is a glossary at the end of this guide.</p>
+</section>
+<section id="what-do-the-measures-show" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-do-the-measures-show"><span class="header-section-number">1.2</span> What do the measures show?</h2>
+<p>Pages have different measures available, the following sections on measures give a listing of what is available in the tool as a whole, and what it represents. To see which measures are available on individual pages please refer to the section describing each page of the tool.</p>
+</section>
+<section id="sus-activity-measures" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sus-activity-measures"><span class="header-section-number">1.3</span> SUS activity measures</h2>
+<section id="attended-count" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="attended-count"><span class="header-section-number">1.3.1</span> Attended count</h3>
+<p>The number of outpatient appointments that patients attended, whether in person or remotely.</p>
+</section>
+<section id="first-appointment-count" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="first-appointment-count"><span class="header-section-number">1.3.2</span> First Appointment Count</h3>
+<p>The number of appointments that were a patient’s first, or only, appointment in a series.</p>
+</section>
+<section id="attended-first-appointment-count" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="attended-first-appointment-count"><span class="header-section-number">1.3.3</span> Attended First Appointment Count</h3>
+<p>As First Appointment (above) but limited to appointments where the patient attended in time to be seen</p>
+</section>
+<section id="follow-up-appointment-count" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="follow-up-appointment-count"><span class="header-section-number">1.3.4</span> Follow-up Appointment Count</h3>
+<p>The number of appointments for patients attending following a first attendance or period of hospitalisation.</p>
+</section>
+<section id="attended-follow-up-appointment-count" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="attended-follow-up-appointment-count"><span class="header-section-number">1.3.5</span> Attended Follow Up Appointment Count</h3>
+<p>As Follow Up Appointment (above) but limited to appointments where the patient attended in time to be seen</p>
+</section>
+<section id="follow-ups-per-first" class="level3" data-number="1.3.6">
+<h3 data-number="1.3.6" class="anchored" data-anchor-id="follow-ups-per-first"><span class="header-section-number">1.3.6</span> Follow-ups per First</h3>
+<p>The ratio of attended follow-up appointments to attended first appointments. For example, a value of 2.5 means there are 2.5 follow-up appointments for every new patient seen.</p>
+</section>
+<section id="dna-count" class="level3" data-number="1.3.7">
+<h3 data-number="1.3.7" class="anchored" data-anchor-id="dna-count"><span class="header-section-number">1.3.7</span> DNA Count</h3>
+<p>The number of appointments that patients did not attend and did not cancel in advance.</p>
+</section>
+<section id="missed-appointment-rate" class="level3" data-number="1.3.8">
+<h3 data-number="1.3.8" class="anchored" data-anchor-id="missed-appointment-rate"><span class="header-section-number">1.3.8</span> Missed Appointment Rate</h3>
+<p>The proportion of appointments that were missed (DNA) out of all appointments that should have taken place (attended plus missed, excluding those cancelled in advance).</p>
+</section>
+<section id="face-to-face-count" class="level3" data-number="1.3.9">
+<h3 data-number="1.3.9" class="anchored" data-anchor-id="face-to-face-count"><span class="header-section-number">1.3.9</span> Face to Face Count</h3>
+<p>The number of attended appointments delivered in person at a clinic or hospital site.</p>
+</section>
+<section id="attended-face-to-face-count" class="level3" data-number="1.3.10">
+<h3 data-number="1.3.10" class="anchored" data-anchor-id="attended-face-to-face-count"><span class="header-section-number">1.3.10</span> Attended Face to Face Count</h3>
+<p>As Face to Face count, limited to appointments where the patient attended in time to be seen</p>
+</section>
+<section id="non-face-to-face-count" class="level3" data-number="1.3.11">
+<h3 data-number="1.3.11" class="anchored" data-anchor-id="non-face-to-face-count"><span class="header-section-number">1.3.11</span> Non Face to Face Count</h3>
+<p>The number of attended appointments delivered remotely, for example by telephone or video.</p>
+</section>
+<section id="attended-face-to-face-count-1" class="level3" data-number="1.3.12">
+<h3 data-number="1.3.12" class="anchored" data-anchor-id="attended-face-to-face-count-1"><span class="header-section-number">1.3.12</span> Attended Face to Face Count</h3>
+<p>As Non Face to Face count, limited to appointments where the patient attended in time for the appointment to take place</p>
+</section>
+<section id="proportion-of-remote-attendances" class="level3" data-number="1.3.13">
+<h3 data-number="1.3.13" class="anchored" data-anchor-id="proportion-of-remote-attendances"><span class="header-section-number">1.3.13</span> Proportion of Remote Attendances</h3>
+<p>The share of attended appointments that were delivered non-face-to-face.</p>
+</section>
+<section id="discharged-count" class="level3" data-number="1.3.14">
+<h3 data-number="1.3.14" class="anchored" data-anchor-id="discharged-count"><span class="header-section-number">1.3.14</span> Discharged Count</h3>
+<p>The number of appointments where the recorded outcome was that the patient was discharged from the service — meaning they do not have a further follow-up booked through that referral.</p>
+</section>
+<section id="appointments-ending-in-discharge" class="level3" data-number="1.3.15">
+<h3 data-number="1.3.15" class="anchored" data-anchor-id="appointments-ending-in-discharge"><span class="header-section-number">1.3.15</span> Appointments Ending in Discharge</h3>
+<p>The proportion of attended appointments where the outcome was discharge.</p>
+</section>
+<section id="uncancelled-appointment-count" class="level3" data-number="1.3.16">
+<h3 data-number="1.3.16" class="anchored" data-anchor-id="uncancelled-appointment-count"><span class="header-section-number">1.3.16</span> Uncancelled Appointment Count</h3>
+<p>The total number of appointments that were either attended or missed without prior cancellation.</p>
+</section>
+</section>
+<section id="pifu-measures" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="pifu-measures"><span class="header-section-number">1.4</span> PIFU measures</h2>
+<p>PIFU (Patient Initiated Follow-Up) data is reported by providers through the EROC data collection.</p>
+<section id="moved-and-discharged-to-pifu-count" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="moved-and-discharged-to-pifu-count"><span class="header-section-number">1.4.1</span> Moved and Discharged to PIFU Count</h3>
+<p>The number of patients who were either moved onto or discharged to a PIFU pathway during the period. This means they have been taken off a regular follow-up schedule and given the ability to re-book themselves if needed.</p>
+</section>
+<section id="pifu-utilisation-rate" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="pifu-utilisation-rate"><span class="header-section-number">1.4.2</span> PIFU Utilisation Rate</h3>
+<p>The proportion of eligible attended first appointments where the patient was subsequently moved to or discharged onto a PIFU pathway. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity.</p>
+</section>
+</section>
+<section id="specialist-advice-measures" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="specialist-advice-measures"><span class="header-section-number">1.5</span> Specialist advice measures</h2>
+<p>These measures relate to the Advice and Guidance (A&amp;G) process, where referrers request specialist input before or after making a referral. Requests are split into pre-referral (advice before a referral is made) and post-referral (advice after a referral has already been submitted).</p>
+<section id="pre-referral-request-count-post-referral-request-count" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="pre-referral-request-count-post-referral-request-count"><span class="header-section-number">1.5.1</span> Pre-Referral Request Count / Post-Referral Request Count</h3>
+<p>The total number of specialist advice requests received, split by whether they were made before or after referral. The combined total is shown in Total Referral Requests.</p>
+</section>
+<section id="total-referral-requests" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="total-referral-requests"><span class="header-section-number">1.5.2</span> Total Referral Requests</h3>
+<p>The total number of specialist advice requests received, regardless of whether they were pre- or post-referral.</p>
+</section>
+<section id="pre-referral-processed-count-post-referral-processed-count" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="pre-referral-processed-count-post-referral-processed-count"><span class="header-section-number">1.5.3</span> Pre-Referral Processed Count / Post-Referral Processed Count</h3>
+<p>The number of requests that have been completed and closed — meaning the specialist has responded and the request is no longer open. Requests that are still open or ongoing are not included.</p>
+</section>
+<section id="total-processed-count" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="total-processed-count"><span class="header-section-number">1.5.4</span> Total Processed Count</h3>
+<p>The combined total of all closed specialist advice requests, regardless of pre- or post-referral status.</p>
+</section>
+<section id="pre-referral-diversions-count-post-referral-diversions-count" class="level3" data-number="1.5.5">
+<h3 data-number="1.5.5" class="anchored" data-anchor-id="pre-referral-diversions-count-post-referral-diversions-count"><span class="header-section-number">1.5.5</span> Pre-Referral Diversions Count / Post-Referral Diversions Count</h3>
+<p>The number of processed requests where the outcome was that the patient was returned to their referrer with advice.</p>
+</section>
+<section id="total-referral-diversions" class="level3" data-number="1.5.6">
+<h3 data-number="1.5.6" class="anchored" data-anchor-id="total-referral-diversions"><span class="header-section-number">1.5.6</span> Total Referral Diversions</h3>
+<p>The combined total of all diversions, regardless of pre- or post-referral status.</p>
+</section>
+<section id="pre-referral-diversion-rate-post-referral-diversion-rate" class="level3" data-number="1.5.7">
+<h3 data-number="1.5.7" class="anchored" data-anchor-id="pre-referral-diversion-rate-post-referral-diversion-rate"><span class="header-section-number">1.5.7</span> Pre-Referral Diversion Rate / Post-Referral Diversion Rate</h3>
+<p>The proportion of requests that resulted in a diversion, out of all requests submitted. Expressed as a percentage.</p>
+</section>
+<section id="overall-sa-diversion-rate" class="level3" data-number="1.5.8">
+<h3 data-number="1.5.8" class="anchored" data-anchor-id="overall-sa-diversion-rate"><span class="header-section-number">1.5.8</span> Overall SA Diversion Rate</h3>
+<p>The diversion rate across all specialist advice requests combined, regardless of pre- or post-referral status.</p>
+</section>
+<section id="overall-sa-utilisation-rate" class="level3" data-number="1.5.9">
+<h3 data-number="1.5.9" class="anchored" data-anchor-id="overall-sa-utilisation-rate"><span class="header-section-number">1.5.9</span> Overall SA Utilisation Rate</h3>
+<p>The proportion of eligible first outpatient appointments where a specialist advice request had been submitted beforehand. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity, and is the same denominator used for the pre- and post-referral utilisation rates.</p>
+</section>
+<section id="pre-referral-utilisation-rate-post-referral-utilisation-rate" class="level3" data-number="1.5.10">
+<h3 data-number="1.5.10" class="anchored" data-anchor-id="pre-referral-utilisation-rate-post-referral-utilisation-rate"><span class="header-section-number">1.5.10</span> Pre-Referral Utilisation Rate / Post-Referral Utilisation Rate</h3>
+<p>The utilisation rate broken down by whether the request was made before or after referral, using the same denominator as the overall rate.</p>
+</section>
+</section>
+<section id="e-referral-measures" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="e-referral-measures"><span class="header-section-number">1.6</span> e-Referral measures</h2>
+<p>These measures are drawn from the NHS e-Referral Service and relate to the electronic management of referrals and advice requests.</p>
+<section id="ag-received-count" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="ag-received-count"><span class="header-section-number">1.6.1</span> A&amp;G Received Count</h3>
+<p>The number of Advice and Guidance requests received by a provider through the e-Referral Service.</p>
+</section>
+<section id="ag-response-count" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="ag-response-count"><span class="header-section-number">1.6.2</span> A&amp;G Response Count</h3>
+<p>The number of responses to Advice and Guidance requests submitted by a provider. Comparing this to the received count gives an indication of how quickly or completely requests are being answered.</p>
+</section>
+<section id="ag-returned-with-advice-count" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="ag-returned-with-advice-count"><span class="header-section-number">1.6.3</span> A&amp;G Returned With Advice Count</h3>
+<p>The number of A&amp;G requests where the provider returned the request to the referrer with advice, rather than converting it to a referral. This is equivalent to a diversion in the EROC-based measures.</p>
+</section>
+<section id="ag-converted-to-referral-count" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="ag-converted-to-referral-count"><span class="header-section-number">1.6.4</span> A&amp;G Converted to Referral Count</h3>
+<p>The number of A&amp;G requests that were converted into a full referral — either by the provider or by the referrer following the specialist’s advice. This represents requests where the advice pathway concluded that a referral was appropriate.</p>
+</section>
+<section id="e-referral-accepted-count" class="level3" data-number="1.6.5">
+<h3 data-number="1.6.5" class="anchored" data-anchor-id="e-referral-accepted-count"><span class="header-section-number">1.6.5</span> E-Referral Accepted Count</h3>
+<p>The number of referrals accepted by the receiving organisation through the e-Referral Service.</p>
+</section>
+<section id="e-referral-rejected-count" class="level3" data-number="1.6.6">
+<h3 data-number="1.6.6" class="anchored" data-anchor-id="e-referral-rejected-count"><span class="header-section-number">1.6.6</span> E-Referral Rejected Count</h3>
+<p>The number of referrals rejected by the receiving organisation.</p>
+</section>
+<section id="asi-count" class="level3" data-number="1.6.7">
+<h3 data-number="1.6.7" class="anchored" data-anchor-id="asi-count"><span class="header-section-number">1.6.7</span> ASI Count</h3>
+<p>The number of referrals that encountered an Appointment Slot Issue — meaning the patient could not be offered an appointment through the e-Referral system, typically because no slots were available.</p>
+</section>
+</section>
+<section id="pages" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="pages"><span class="header-section-number">1.7</span> Pages</h2>
+<section id="activity-by-organisation" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="activity-by-organisation"><span class="header-section-number">1.7.1</span> Activity by Organisation</h3>
+<section id="what-this-page-is-for" class="level4" data-number="1.7.1.1">
+<h4 data-number="1.7.1.1" class="anchored" data-anchor-id="what-this-page-is-for"><span class="header-section-number">1.7.1.1</span> What this page is for</h4>
+<p>Use this page when you want to understand how activity levels have changed over time for a single organisation — either a provider trust or an ICB. It shows you a chosen measure month by month, split by financial year so you can compare the same months across years.</p>
+</section>
+<section id="setting-your-filters" class="level4" data-number="1.7.1.2">
+<h4 data-number="1.7.1.2" class="anchored" data-anchor-id="setting-your-filters"><span class="header-section-number">1.7.1.2</span> Setting your filters</h4>
+<p>Start by selecting the organisation you are interested in. You can filter by ICB first to narrow down to a group of providers, then select a specific Provider if you want to focus on one trust. If you leave the provider filter blank, the figures will reflect the South East region as a whole. Next, select a Treatment Function if you want to focus on a particular specialty. Leaving this blank will show all specialties combined. Finally, choose the metric you want to look at from the measure list. This controls what the chart and table display.</p>
+</section>
+<section id="what-you-are-looking-at" class="level4" data-number="1.7.1.3">
+<h4 data-number="1.7.1.3" class="anchored" data-anchor-id="what-you-are-looking-at"><span class="header-section-number">1.7.1.3</span> What you are looking at</h4>
+<p>There are two visuals on this page:</p>
+<ul>
+<li>A line chart showing your chosen measure by month, with a separate line for each financial year. This makes it easy to spot whether activity in a given month is higher or lower than the same month in previous years.</li>
+<li>A table showing the same figures in rows (months) and columns (financial years), which is useful if you want to note down or share specific numbers.</li>
+</ul>
+</section>
+<section id="measures-available-for-this-page" class="level4" data-number="1.7.1.4">
+<h4 data-number="1.7.1.4" class="anchored" data-anchor-id="measures-available-for-this-page"><span class="header-section-number">1.7.1.4</span> Measures available for this page</h4>
+<p>All SUS based measures exclude diagnostic medicine activity (TFC 812)</p>
+<ul>
+<li><code>Follow ups per first</code></li>
+<li><code>Missed Appointment Rate</code></li>
+<li><code>Proportion of remote attendances</code></li>
+<li><code>Appointments ending in discharge</code></li>
+<li><code>Attended Count</code></li>
+<li><code>Discharged Count</code></li>
+<li><code>DNA Count</code></li>
+<li><code>Attended Face to Face Count</code></li>
+<li><code>Attended First Appointment Count</code></li>
+<li><code>Attended Follow up Appointment Count</code></li>
+<li><code>Attended Non Face to Face Count</code></li>
+<li><code>Uncancelled Appointment Count</code></li>
+<li><code>Overall SA Diversion Rate</code></li>
+<li><code>Overall SA Utilisation Rate</code></li>
+<li><code>Pre Referral Diversion Rate</code></li>
+<li><code>Pre Referral Utilisation Rate</code></li>
+<li><code>Post Referral Diversion Rate</code></li>
+<li><code>Post Referral Utilisation Rate</code></li>
+<li><code>Move and Discharged to PIFU count</code></li>
+<li><code>PIFU Utilisation Rate</code></li>
+</ul>
+</section>
+<section id="data-note" class="level4" data-number="1.7.1.5">
+<h4 data-number="1.7.1.5" class="anchored" data-anchor-id="data-note"><span class="header-section-number">1.7.1.5</span> Data note</h4>
+<p>This page uses stable, finalised data only. The most recent one or two months may not appear here as they have not yet been finalised.</p>
+</section>
+</section>
+<section id="activity-by-icb" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="activity-by-icb"><span class="header-section-number">1.7.2</span> Activity by ICB</h3>
+<section id="what-this-page-is-for-1" class="level4" data-number="1.7.2.1">
+<h4 data-number="1.7.2.1" class="anchored" data-anchor-id="what-this-page-is-for-1"><span class="header-section-number">1.7.2.1</span> What this page is for</h4>
+<p>Use this page when you want to see how the providers within an ICB compare to each other over time for a chosen measure. Rather than looking at one organisation, this page splits activity out by provider so you can see who is contributing what to the overall picture. Setting your filters Select the ICB you want to focus on. You can then select a Treatment Function to narrow to a specialty if needed. Choose the metric you want to compare across providers.</p>
+</section>
+<section id="what-you-are-looking-at-1" class="level4" data-number="1.7.2.2">
+<h4 data-number="1.7.2.2" class="anchored" data-anchor-id="what-you-are-looking-at-1"><span class="header-section-number">1.7.2.2</span> What you are looking at</h4>
+<p>A line chart showing your chosen measure by month, with a separate line for each provider within the selected ICB. This allows you to see whether trends are consistent across providers or whether one or two are driving a pattern. A table showing the same figures in rows (months) and columns (financial years), aggregated to the ICB level.</p>
+</section>
+<section id="measures-available-for-this-page-1" class="level4" data-number="1.7.2.3">
+<h4 data-number="1.7.2.3" class="anchored" data-anchor-id="measures-available-for-this-page-1"><span class="header-section-number">1.7.2.3</span> Measures available for this page</h4>
+<p>All SUS based measures exclude diagnostic medicine activity (TFC 812)</p>
+<ul>
+<li><code>Follow ups per first</code></li>
+<li><code>Missed Appointment Rate</code></li>
+<li><code>Proportion of remote attendances</code></li>
+<li><code>Appointments ending in discharge</code></li>
+<li><code>Attended Count</code></li>
+<li><code>Discharged Count</code></li>
+<li><code>DNA Count</code></li>
+<li><code>Attended Face to Face Count</code></li>
+<li><code>Attended First Appointment Count</code></li>
+<li><code>Attended Follow up Appointment Count</code></li>
+<li><code>Attended Non Face to Face Count</code></li>
+<li><code>Uncancelled Appointment Count</code></li>
+<li><code>Overall SA Diversion Rate</code></li>
+<li><code>Overall SA Utilisation Rate</code></li>
+<li><code>Pre Referral Diversion Rate</code></li>
+<li><code>Pre Referral Utilisation Rate</code></li>
+<li><code>Post Referral Diversion Rate</code></li>
+<li><code>Post Referral Utilisation Rate</code></li>
+<li><code>Move and Discharged to PIFU count</code></li>
+<li><code>PIFU Utilisation Rate</code></li>
+</ul>
+</section>
+<section id="data-note-1" class="level4" data-number="1.7.2.4">
+<h4 data-number="1.7.2.4" class="anchored" data-anchor-id="data-note-1"><span class="header-section-number">1.7.2.4</span> Data note</h4>
+<p>As with the Activity by Organisation page, only finalised data is shown here.</p>
+</section>
+</section>
+<section id="benchmarking-latest-stable-position" class="level3" data-number="1.7.3">
+<h3 data-number="1.7.3" class="anchored" data-anchor-id="benchmarking-latest-stable-position"><span class="header-section-number">1.7.3</span> Benchmarking — Latest Stable Position</h3>
+<section id="what-this-page-is-for-2" class="level4" data-number="1.7.3.1">
+<h4 data-number="1.7.3.1" class="anchored" data-anchor-id="what-this-page-is-for-2"><span class="header-section-number">1.7.3.1</span> What this page is for</h4>
+<p>Use this page when you want a snapshot of how all acute providers in the South East are performing across a standard set of measures in the most recent finalised month. This is the page to use if you want to identify which providers stand out — either as strong performers or as areas for follow-up.</p>
+</section>
+<section id="setting-your-filters-1" class="level4" data-number="1.7.3.2">
+<h4 data-number="1.7.3.2" class="anchored" data-anchor-id="setting-your-filters-1"><span class="header-section-number">1.7.3.2</span> Setting your filters</h4>
+<p>You can filter by Treatment Function, Age Group (children and young people, or adults), Appointment Priority, and whether the appointment involved a procedure. These filters apply across all the measures shown, so you can, for example, look at the benchmarking picture for adult cardiology appointments only.</p>
+</section>
+<section id="what-you-are-looking-at-2" class="level4" data-number="1.7.3.3">
+<h4 data-number="1.7.3.3" class="anchored" data-anchor-id="what-you-are-looking-at-2"><span class="header-section-number">1.7.3.3</span> What you are looking at</h4>
+<p>A single table showing one row per provider, grouped by ICB. The columns show a standard set of measures:</p>
+<ul>
+<li>Specialist advice diversion rate (overall, and split by pre- and post-referral)</li>
+<li>Specialist advice utilisation rate</li>
+<li>Follow-up appointments per first appointment</li>
+<li>Proportion of appointments delivered remotely</li>
+<li>Missed appointment rate</li>
+<li>Proportion of appointments ending in discharge</li>
+<li>PIFU utilisation rate</li>
+</ul>
+<p>At the top of the page there are cards showing the date of the data being used for each data source, so you can see exactly which month you are looking at.</p>
+</section>
+<section id="data-note-2" class="level4" data-number="1.7.3.4">
+<h4 data-number="1.7.3.4" class="anchored" data-anchor-id="data-note-2"><span class="header-section-number">1.7.3.4</span> Data note</h4>
+<p>This page only shows acute trust providers. It uses finalised data only. Diagnostic medicine activity (TFC 812) is excluded from the SUS-based measures.</p>
+</section>
+</section>
+<section id="benchmarking-heat-map" class="level3" data-number="1.7.4">
+<h3 data-number="1.7.4" class="anchored" data-anchor-id="benchmarking-heat-map"><span class="header-section-number">1.7.4</span> Benchmarking — Heat Map</h3>
+<section id="what-this-page-is-for-3" class="level4" data-number="1.7.4.1">
+<h4 data-number="1.7.4.1" class="anchored" data-anchor-id="what-this-page-is-for-3"><span class="header-section-number">1.7.4.1</span> What this page is for</h4>
+<p>Use this page when you want to explore one benchmarking measure in detail across both providers and specialties at the same time. It is particularly useful for spotting whether a pattern at a provider is consistent across all their specialties, or concentrated in one area.</p>
+</section>
+<section id="setting-your-filters-2" class="level4" data-number="1.7.4.2">
+<h4 data-number="1.7.4.2" class="anchored" data-anchor-id="setting-your-filters-2"><span class="header-section-number">1.7.4.2</span> Setting your filters</h4>
+<p>Choose a single metric from the measure list — this controls what the table shows. You can also filter by Age Group, Appointment Priority, and procedure status.</p>
+</section>
+<section id="what-you-are-looking-at-3" class="level4" data-number="1.7.4.3">
+<h4 data-number="1.7.4.3" class="anchored" data-anchor-id="what-you-are-looking-at-3"><span class="header-section-number">1.7.4.3</span> What you are looking at</h4>
+<p>A table where the rows are treatment function groups (specialties) and the columns are providers. The values show your chosen measure for each combination. The colour shading helps you quickly identify where values are high or low across the grid. A card at the top shows the date of the data being displayed.</p>
+</section>
+<section id="measures-available-on-this-page" class="level4" data-number="1.7.4.4">
+<h4 data-number="1.7.4.4" class="anchored" data-anchor-id="measures-available-on-this-page"><span class="header-section-number">1.7.4.4</span> Measures available on this page</h4>
+<p>All SUS based measures exclude diagnostic medicine activity (TFC 812)</p>
+<ul>
+<li><code>Overall SA Diversion Rate</code></li>
+<li><code>Overall SA Utilisation Rate</code></li>
+<li><code>Missed Appointment Rate excl 812</code></li>
+<li><code>Proportion of Remote Attendances excl 812</code></li>
+<li><code>Appointments Ending in Discharge excl 812</code></li>
+<li><code>Follow ups per first excl 812</code></li>
+<li><code>PIFU Utilisation Rate</code></li>
+</ul>
+</section>
+<section id="data-note-3" class="level4" data-number="1.7.4.5">
+<h4 data-number="1.7.4.5" class="anchored" data-anchor-id="data-note-3"><span class="header-section-number">1.7.4.5</span> Data note</h4>
+<p>This page uses finalised data only and shows acute trusts only. A small number of broad “other” specialty groupings are excluded from the rows as they are not meaningful at this level of detail.</p>
+</section>
+</section>
+<section id="activity-by-weekday" class="level3" data-number="1.7.5">
+<h3 data-number="1.7.5" class="anchored" data-anchor-id="activity-by-weekday"><span class="header-section-number">1.7.5</span> Activity by Weekday</h3>
+<section id="what-this-page-is-for-4" class="level4" data-number="1.7.5.1">
+<h4 data-number="1.7.5.1" class="anchored" data-anchor-id="what-this-page-is-for-4"><span class="header-section-number">1.7.5.1</span> What this page is for</h4>
+<p>Use this page when you want to understand how activity is distributed across days of the week for a particular organisation. This can be useful for understanding capacity patterns or identifying whether certain appointment types are concentrated on particular days.</p>
+</section>
+<section id="setting-your-filters-3" class="level4" data-number="1.7.5.2">
+<h4 data-number="1.7.5.2" class="anchored" data-anchor-id="setting-your-filters-3"><span class="header-section-number">1.7.5.2</span> Setting your filters</h4>
+<p>Select an ICB and/or Provider, and a Treatment Function if relevant. Select an Age Group if you want to focus on a particular patient group. Choose the metric you want to look at from the measure list. You can also filter to a specific month using the month filter.</p>
+</section>
+<section id="what-you-are-looking-at-4" class="level4" data-number="1.7.5.3">
+<h4 data-number="1.7.5.3" class="anchored" data-anchor-id="what-you-are-looking-at-4"><span class="header-section-number">1.7.5.3</span> What you are looking at</h4>
+<ul>
+<li>A bar chart showing your chosen measure for each day of the week.</li>
+<li>A table showing the same figures with providers in the rows and days of the week in the columns.</li>
+</ul>
+</section>
+<section id="measures-available-on-this-page-1" class="level4" data-number="1.7.5.4">
+<h4 data-number="1.7.5.4" class="anchored" data-anchor-id="measures-available-on-this-page-1"><span class="header-section-number">1.7.5.4</span> Measures available on this page</h4>
+<p>All SUS based measures exclude diagnostic medicine activity (TFC 812)</p>
+<ul>
+<li><code>Appointments ending in discharge</code></li>
+<li><code>Attended Face to Face Count</code></li>
+<li><code>Attended First Appointment Count</code></li>
+<li><code>Attended Follow up Appointment Count</code></li>
+<li><code>Attended Non Face to Face Count</code></li>
+<li><code>Discharged Count</code></li>
+<li><code>DNA Count</code></li>
+<li><code>Face to Face Count</code></li>
+<li><code>First Appointment Count</code></li>
+<li><code>Follow up Appointment Count</code></li>
+<li><code>Non Face to Face Count</code></li>
+<li><code>Follow up per First</code></li>
+<li><code>Missed Appointment Rate</code></li>
+<li><code>Proportion of remote attendances</code></li>
+</ul>
+</section>
+<section id="data-note-4" class="level4" data-number="1.7.5.5">
+<h4 data-number="1.7.5.5" class="anchored" data-anchor-id="data-note-4"><span class="header-section-number">1.7.5.5</span> Data note</h4>
+<p>Diagnostic medicine activity (TFC 812) is excluded from all measures on this page.</p>
+</section>
+</section>
+<section id="attendance-breakdown" class="level3" data-number="1.7.6">
+<h3 data-number="1.7.6" class="anchored" data-anchor-id="attendance-breakdown"><span class="header-section-number">1.7.6</span> Attendance Breakdown</h3>
+<section id="what-this-page-is-for-5" class="level4" data-number="1.7.6.1">
+<h4 data-number="1.7.6.1" class="anchored" data-anchor-id="what-this-page-is-for-5"><span class="header-section-number">1.7.6.1</span> What this page is for</h4>
+<p>Use this page when you want to understand the composition of appointments — for example, what proportion were attended, missed, cancelled by the patient, or cancelled by the hospital. You can look at this broken down by month and split by whichever appointment characteristic is most relevant to your question.</p>
+</section>
+<section id="setting-your-filters-4" class="level4" data-number="1.7.6.2">
+<h4 data-number="1.7.6.2" class="anchored" data-anchor-id="setting-your-filters-4"><span class="header-section-number">1.7.6.2</span> Setting your filters</h4>
+<p>Select an ICB and/or Provider, a Treatment Function, and an Age Group if relevant. Select a Financial Year to focus the view. Use the Attribute filter to choose which characteristic you want to break the activity down by — for example, attendance type (attended, DNA, cancelled), appointment type (new or follow-up), contact type (face to face or remote), or outcome.</p>
+</section>
+<section id="what-you-are-looking-at-5" class="level4" data-number="1.7.6.3">
+<h4 data-number="1.7.6.3" class="anchored" data-anchor-id="what-you-are-looking-at-5"><span class="header-section-number">1.7.6.3</span> What you are looking at</h4>
+<p>A bar chart showing the count of activity by month, with bars divided by the characteristic you have selected. A table showing the same breakdown with months in the rows and the selected characteristic’s categories in the columns.</p>
+</section>
+<section id="selectable-attributes" class="level4" data-number="1.7.6.4">
+<h4 data-number="1.7.6.4" class="anchored" data-anchor-id="selectable-attributes"><span class="header-section-number">1.7.6.4</span> Selectable attributes</h4>
+<p>Breakdowns are available for:</p>
+<ul>
+<li>Attendance type</li>
+<li>Appointment type</li>
+<li>Contact type</li>
+<li>Outcome</li>
+</ul>
+</section>
+<section id="data-note-5" class="level4" data-number="1.7.6.5">
+<h4 data-number="1.7.6.5" class="anchored" data-anchor-id="data-note-5"><span class="header-section-number">1.7.6.5</span> Data note</h4>
+<p>This page uses SUS data only. Diagnostic medicine activity (TFC 812) is excluded.</p>
+</section>
+</section>
+<section id="month-comparison-providers" class="level3" data-number="1.7.7">
+<h3 data-number="1.7.7" class="anchored" data-anchor-id="month-comparison-providers"><span class="header-section-number">1.7.7</span> Month Comparison — Providers</h3>
+<section id="what-this-page-is-for-6" class="level4" data-number="1.7.7.1">
+<h4 data-number="1.7.7.1" class="anchored" data-anchor-id="what-this-page-is-for-6"><span class="header-section-number">1.7.7.1</span> What this page is for</h4>
+<p>Use this page when you want to compare how all providers in the region are performing for a single measure in the most recent period, and to see how that has changed from the previous month.</p>
+</section>
+<section id="setting-your-filters-5" class="level4" data-number="1.7.7.2">
+<h4 data-number="1.7.7.2" class="anchored" data-anchor-id="setting-your-filters-5"><span class="header-section-number">1.7.7.2</span> Setting your filters</h4>
+<p>Select a measure from the list on the left — you must select exactly one. You can also filter by Treatment Function, using a two-level list that shows specialty category and then individual specialty. Blank specialty codes are excluded automatically.</p>
+</section>
+<section id="what-you-are-looking-at-6" class="level4" data-number="1.7.7.3">
+<h4 data-number="1.7.7.3" class="anchored" data-anchor-id="what-you-are-looking-at-6"><span class="header-section-number">1.7.7.3</span> What you are looking at</h4>
+<p>A table with one row per acute provider, grouped by ICB. The columns show:</p>
+<ul>
+<li>The live month figure (most recent available, but subject to revision)</li>
+<li>The latest stable month figure (finalised)</li>
+<li>The previous stable month figure</li>
+<li>The variance between live and stable (how much the position has shifted)</li>
+<li>The variance between the two stable months (the month-on-month change in finalised data)</li>
+</ul>
+<p>Two cards at the top show the dates corresponding to the live month and the stable month for the selected measure, so you know exactly what periods you are comparing.</p>
+</section>
+<section id="measures-available-for-this-page-2" class="level4" data-number="1.7.7.4">
+<h4 data-number="1.7.7.4" class="anchored" data-anchor-id="measures-available-for-this-page-2"><span class="header-section-number">1.7.7.4</span> Measures available for this page</h4>
+<p>All SUS based measures exclude diagnostic medicine activity (TFC 812)</p>
+<ul>
+<li><code>Follow ups per first</code></li>
+<li><code>Missed Appointment Rate</code></li>
+<li><code>Proportion of remote attendances</code></li>
+<li><code>Appointments ending in discharge</code></li>
+<li><code>Attended Count</code></li>
+<li><code>Discharged Count</code></li>
+<li><code>DNA Count</code></li>
+<li><code>Attended Face to Face Count</code></li>
+<li><code>Attended First Appointment Count</code></li>
+<li><code>Attended Follow up Appointment Count</code></li>
+<li><code>Attended Non Face to Face Count</code></li>
+<li><code>Uncancelled Appointment Count</code></li>
+<li><code>Overall SA Diversion Rate</code></li>
+<li><code>Overall SA Utilisation Rate</code></li>
+<li><code>Pre Referral Diversion Rate</code></li>
+<li><code>Pre Referral Utilisation Rate</code></li>
+<li><code>Post Referral Diversion Rate</code></li>
+<li><code>Post Referral Utilisation Rate</code></li>
+<li><code>Move and Discharged to PIFU count</code></li>
+<li><code>PIFU Utilisation Rate</code></li>
+</ul>
+</section>
+</section>
+<section id="month-comparison-treatment-functions" class="level3" data-number="1.7.8">
+<h3 data-number="1.7.8" class="anchored" data-anchor-id="month-comparison-treatment-functions"><span class="header-section-number">1.7.8</span> Month Comparison — Treatment Functions</h3>
+<section id="what-this-page-is-for-7" class="level4" data-number="1.7.8.1">
+<h4 data-number="1.7.8.1" class="anchored" data-anchor-id="what-this-page-is-for-7"><span class="header-section-number">1.7.8.1</span> What this page is for</h4>
+<p>Use this page when you want to understand how a single provider is performing across different specialties for a chosen measure, and how that has changed recently.</p>
+</section>
+<section id="setting-your-filters-6" class="level4" data-number="1.7.8.2">
+<h4 data-number="1.7.8.2" class="anchored" data-anchor-id="setting-your-filters-6"><span class="header-section-number">1.7.8.2</span> Setting your filters</h4>
+<p>Select a measure from the list, and then select a Provider using the two-level list (which groups providers by ICB). You must select a single provider for this page to be useful.</p>
+</section>
+<section id="what-you-are-looking-at-7" class="level4" data-number="1.7.8.3">
+<h4 data-number="1.7.8.3" class="anchored" data-anchor-id="what-you-are-looking-at-7"><span class="header-section-number">1.7.8.3</span> What you are looking at</h4>
+<p>A table with one row per specialty group, showing the same live month, stable month, previous stable month, and variance columns as the Month Comparison — Providers page. This lets you quickly see whether a trend at provider level is driven by one specialty or is consistent across all areas. Cards at the top show the relevant data dates for the selected measure.</p>
+</section>
+<section id="measures-available-for-this-page-3" class="level4" data-number="1.7.8.4">
+<h4 data-number="1.7.8.4" class="anchored" data-anchor-id="measures-available-for-this-page-3"><span class="header-section-number">1.7.8.4</span> Measures available for this page</h4>
+<p>All SUS based measures exclude diagnostic medicine activity (TFC 812)</p>
+<ul>
+<li><code>Follow ups per first</code></li>
+<li><code>Missed Appointment Rate</code></li>
+<li><code>Proportion of remote attendances</code></li>
+<li><code>Appointments ending in discharge</code></li>
+<li><code>Attended Count</code></li>
+<li><code>Discharged Count</code></li>
+<li><code>DNA Count</code></li>
+<li><code>Attended Face to Face Count</code></li>
+<li><code>Attended First Appointment Count</code></li>
+<li><code>Attended Follow up Appointment Count</code></li>
+<li><code>Attended Non Face to Face Count</code></li>
+<li><code>Uncancelled Appointment Count</code></li>
+<li><code>Overall SA Diversion Rate</code></li>
+<li><code>Overall SA Utilisation Rate</code></li>
+<li><code>Pre Referral Diversion Rate</code></li>
+<li><code>Pre Referral Utilisation Rate</code></li>
+<li><code>Post Referral Diversion Rate</code></li>
+<li><code>Post Referral Utilisation Rate</code></li>
+<li><code>Move and Discharged to PIFU count</code></li>
+<li><code>PIFU Utilisation Rate</code></li>
+</ul>
+</section>
+</section>
+<section id="month-comparison-metric-overview" class="level3" data-number="1.7.9">
+<h3 data-number="1.7.9" class="anchored" data-anchor-id="month-comparison-metric-overview"><span class="header-section-number">1.7.9</span> Month Comparison — Metric Overview</h3>
+<section id="what-this-page-is-for-8" class="level4" data-number="1.7.9.1">
+<h4 data-number="1.7.9.1" class="anchored" data-anchor-id="what-this-page-is-for-8"><span class="header-section-number">1.7.9.1</span> What this page is for</h4>
+<p>Use this page when you want to see the full picture for a single provider and specialty combination — all measures together — rather than focusing on one metric across many organisations. This is useful for a deeper dive into a specific area.</p>
+</section>
+<section id="setting-your-filters-7" class="level4" data-number="1.7.9.2">
+<h4 data-number="1.7.9.2" class="anchored" data-anchor-id="setting-your-filters-7"><span class="header-section-number">1.7.9.2</span> Setting your filters</h4>
+<p>Select a Provider and a Treatment Function. Both filters use two-level lists to help you navigate.</p>
+</section>
+<section id="what-you-are-looking-at-8" class="level4" data-number="1.7.9.3">
+<h4 data-number="1.7.9.3" class="anchored" data-anchor-id="what-you-are-looking-at-8"><span class="header-section-number">1.7.9.3</span> What you are looking at</h4>
+<p>A table with one row per measure, showing the same live, stable, previous stable, and variance columns as the other month comparison pages. This gives you a complete summary of where that provider and specialty stands right now and how it has moved. Three cards at the top show the stable month dates for SUS data, system EROC data, and PIFU data separately, since these data sources are finalised on slightly different timescales.</p>
+</section>
+</section>
+</section>
+<section id="glossary" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="glossary"><span class="header-section-number">1.8</span> Glossary</h2>
+<section id="acute-trust" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="acute-trust"><span class="header-section-number">1.8.1</span> Acute trust</h3>
+<p>A hospital organisation providing secondary care services, as distinct from primary care (GP practices) or community services.</p>
+</section>
+<section id="ag-specialist-advice-advice-and-guidance." class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="ag-specialist-advice-advice-and-guidance."><span class="header-section-number">1.8.2</span> A&amp;G / Specialist advice — Advice and Guidance.</h3>
+<p>A process by which a GP or other referrer can request clinical advice from a specialist without necessarily making a full referral. Requests can be pre-referral (before a patient is referred) or post-referral (after).</p>
+</section>
+<section id="attended-appointment" class="level3" data-number="1.8.3">
+<h3 data-number="1.8.3" class="anchored" data-anchor-id="attended-appointment"><span class="header-section-number">1.8.3</span> Attended appointment</h3>
+<p>An appointment that the patient attended, whether face to face or remotely.</p>
+</section>
+<section id="diversion-rate" class="level3" data-number="1.8.4">
+<h3 data-number="1.8.4" class="anchored" data-anchor-id="diversion-rate"><span class="header-section-number">1.8.4</span> Diversion rate</h3>
+<p>The proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.</p>
+</section>
+<section id="dna" class="level3" data-number="1.8.5">
+<h3 data-number="1.8.5" class="anchored" data-anchor-id="dna"><span class="header-section-number">1.8.5</span> DNA</h3>
+<p>Did Not Attend. An appointment the patient missed without cancelling.</p>
+</section>
+<section id="ers-e-referral-service" class="level3" data-number="1.8.6">
+<h3 data-number="1.8.6" class="anchored" data-anchor-id="ers-e-referral-service"><span class="header-section-number">1.8.6</span> eRS / e-Referral Service</h3>
+<p>The NHS system used to manage referrals electronically between primary and secondary care.</p>
+</section>
+<section id="eroc" class="level3" data-number="1.8.7">
+<h3 data-number="1.8.7" class="anchored" data-anchor-id="eroc"><span class="header-section-number">1.8.7</span> EROC</h3>
+<p>Elective Recovery Outpatient Collection. A data submission collecting elective recovery activity. Split into provider submissions used in this tool for activity related to PIFU, and system submissions, used in this tool to give information about specialist advice activity</p>
+</section>
+<section id="icb" class="level3" data-number="1.8.8">
+<h3 data-number="1.8.8" class="anchored" data-anchor-id="icb"><span class="header-section-number">1.8.8</span> ICB</h3>
+<p>Integrated Care Board. The organisation responsible for planning NHS services for a local population.</p>
+</section>
+<section id="live-flex-month" class="level3" data-number="1.8.9">
+<h3 data-number="1.8.9" class="anchored" data-anchor-id="live-flex-month"><span class="header-section-number">1.8.9</span> Live / flex month</h3>
+<p>The most recent month of data available. These figures are provisional and may change as information can become available post submission and will be refined through subsequent submissions.</p>
+</section>
+<section id="missed-appointment-rate-1" class="level3" data-number="1.8.10">
+<h3 data-number="1.8.10" class="anchored" data-anchor-id="missed-appointment-rate-1"><span class="header-section-number">1.8.10</span> Missed appointment rate</h3>
+<p>The proportion of appointments that were not attended and not cancelled in advance. Calculated as DNAs divided by the total of attended and missed appointments.</p>
+</section>
+<section id="pifu" class="level3" data-number="1.8.11">
+<h3 data-number="1.8.11" class="anchored" data-anchor-id="pifu"><span class="header-section-number">1.8.11</span> PIFU</h3>
+<p>Patient Initiated Follow-Up. An arrangement where a patient is given the ability to access secondary care support if their condition changes, rather than being given a routine follow-up appointment.</p>
+</section>
+<section id="provider" class="level3" data-number="1.8.12">
+<h3 data-number="1.8.12" class="anchored" data-anchor-id="provider"><span class="header-section-number">1.8.12</span> Provider</h3>
+<p>In this context, an NHS organisation delivering hospital services, typically an acute trust. Stable / freeze month — a slightly earlier month of data that has been finalised and is no longer subject to change. Used as the primary reference point for benchmarking and comparison.</p>
+</section>
+<section id="sus" class="level3" data-number="1.8.13">
+<h3 data-number="1.8.13" class="anchored" data-anchor-id="sus"><span class="header-section-number">1.8.13</span> SUS</h3>
+<p>Secondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.</p>
+</section>
+<section id="tfc" class="level3" data-number="1.8.14">
+<h3 data-number="1.8.14" class="anchored" data-anchor-id="tfc"><span class="header-section-number">1.8.14</span> TFC</h3>
+<p>Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g.&nbsp;cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.</p>
+</section>
+<section id="tfc-812" class="level3" data-number="1.8.15">
+<h3 data-number="1.8.15" class="anchored" data-anchor-id="tfc-812"><span class="header-section-number">1.8.15</span> TFC 812</h3>
+<p>The treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.</p>
+</section>
+</section>
+<section id="version-history" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="version-history"><span class="header-section-number">1.9</span> Version History</h2>
+<ul>
+<li>0.1 2026-06-05 John Cusack: Initial draft</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
