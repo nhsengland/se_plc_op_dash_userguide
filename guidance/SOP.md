@@ -1,14 +1,15 @@
 # Standard Operating Procedure:
 
-SOP last updated by:
+SOP last updated by: John Cusack
 
-SOP last updated date:
+SOP last updated date: 08/06/2026
 
 ## Structure
 
 ### Repo Structure
 
-Detail folder structure.
+The repository contains an index.md in the top level folder
+... return when structure settled ...
 
 ## Procedure
 
