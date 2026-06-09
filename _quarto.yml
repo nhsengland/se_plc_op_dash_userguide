@@ -7,7 +7,16 @@ project:
 
 website:
   title: South East Outpatient Activity Dashboard Userguide
-
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: measures.qmd
+        text: Measures
+      - href: pages.qmd
+        text: Dashboard Pages
+      - href: glossary.qmd
+        text: Glossary
 format:
   html:
     theme:

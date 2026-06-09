@@ -5,7 +5,7 @@ title: "Measures"
 # Outpatient activity (SUS) measures
 
 ## Attended count
-The number of outpatient appointments that patients attended, whether in person or remotely. 
+The number of outpatient appointments that patients attended, whether in person or remotely. Does not include activity where the patient was not present.
 
 ## Attended First Appointment Count
 The number of appointments that were a patient's first, or only, appointment in a series, limited to appointments where the patient attended in time to be seen 
