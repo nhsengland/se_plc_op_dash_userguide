@@ -2,22 +2,16 @@
 title: "Measures"
 ---
 
-# SUS activity measures
+# Outpatient activity (SUS) measures
 
 ## Attended count
 The number of outpatient appointments that patients attended, whether in person or remotely. 
 
-## First Appointment Count
-The number of appointments that were a patient's first, or only, appointment in a series. 
-
 ## Attended First Appointment Count
-As First Appointment (above) but limited to appointments where the patient attended in time to be seen
-
-## Follow-up Appointment Count
-The number of appointments for patients attending following a first attendance or period of hospitalisation. 
+The number of appointments that were a patient's first, or only, appointment in a series, limited to appointments where the patient attended in time to be seen 
 
 ## Attended Follow Up Appointment Count
-As Follow Up Appointment (above) but limited to appointments where the patient attended in time to be seen
+The number of appointments for patients attending following a first attendance or period of hospitalisation, limited to appointments where the patient attended in time to be seen. 
 
 ## Follow-ups per First
 The ratio of attended follow-up appointments to attended first appointments. For example, a value of 2.5 means there are 2.5 follow-up appointments for every new patient seen.
@@ -28,17 +22,11 @@ The number of appointments that patients did not attend and did not cancel in ad
 ## Missed Appointment Rate
 The proportion of appointments that were missed (DNA) out of all appointments that should have taken place (attended plus missed, excluding those cancelled in advance). 
 
-## Face to Face Count
-The number of attended appointments delivered in person at a clinic or hospital site.
-
 ## Attended Face to Face Count
-As Face to Face count, limited to appointments where the patient attended in time to be seen
-
-## Non Face to Face Count
-The number of attended appointments delivered remotely, for example by telephone or video.
+The number of attended appointments delivered in person at a clinic or hospital site, limited to appointments where the patient attended in time to be seen
 
 ## Attended Non Face to Face Count
-As Non Face to Face count, limited to appointments where the patient attended in time for the appointment to take place
+The number of attended appointments delivered remotely, for example by telephone or video, limited to appointments where the patient attended in time for the appointment to take place
 
 ## Proportion of Remote Attendances
 The share of attended appointments that were delivered non-face-to-face. 
@@ -117,4 +105,3 @@ The number of referrals rejected by the receiving organisation.
 
 ## ASI Count
 The number of referrals that encountered an Appointment Slot Issue — meaning the patient could not be offered an appointment through the e-Referral system, typically because no slots were available.
-
