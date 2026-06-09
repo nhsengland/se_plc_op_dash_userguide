@@ -1,6 +1,5 @@
 ---
 title: "Glossary"
-format: html
 ---
 
 ## Acute trust
@@ -11,6 +10,9 @@ A process by which a GP or other referrer can request clinical advice from a spe
 
 ## Attended appointment
 An appointment that the patient attended, whether face to face or remotely.
+
+## ASI
+"Appointment Slot Issue" - a term related to the electronic referrals service. An ASI takes place when an attempt is made to book a patient into a clinic that has no available slots. This most commonly triggers the "defer to provider" which transfers the booking responsibility from the referrer back to the service provider.
 
 ## Diversion rate 
 The proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.
