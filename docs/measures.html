@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>South East Outpatient Activity Dashboard Userguide - Planned Care Outpatient Activity Dashboard — User Guide</title>
+<title>South East Outpatient Activity Dashboard Userguide - Measures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./measures.html"> 
+    <a class="nav-link active" href="./measures.html" aria-current="page"> 
 <span class="menu-text">Measures</span></a>
   </li>  
   <li class="nav-item">
@@ -121,8 +121,49 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-this-tool" id="toc-what-is-this-tool" class="nav-link active" data-scroll-target="#what-is-this-tool"><span class="header-section-number">1</span> What is this tool?</a></li>
-  <li><a href="#what-do-the-measures-show" id="toc-what-do-the-measures-show" class="nav-link" data-scroll-target="#what-do-the-measures-show"><span class="header-section-number">2</span> What do the measures show?</a></li>
+  <li><a href="#outpatient-activity-sus-measures" id="toc-outpatient-activity-sus-measures" class="nav-link active" data-scroll-target="#outpatient-activity-sus-measures"><span class="header-section-number">1</span> Outpatient activity (SUS) measures</a>
+  <ul>
+  <li><a href="#attended-count" id="toc-attended-count" class="nav-link" data-scroll-target="#attended-count"><span class="header-section-number">1.1</span> Attended count</a></li>
+  <li><a href="#attended-first-appointment-count" id="toc-attended-first-appointment-count" class="nav-link" data-scroll-target="#attended-first-appointment-count"><span class="header-section-number">1.2</span> Attended First Appointment Count</a></li>
+  <li><a href="#attended-follow-up-appointment-count" id="toc-attended-follow-up-appointment-count" class="nav-link" data-scroll-target="#attended-follow-up-appointment-count"><span class="header-section-number">1.3</span> Attended Follow Up Appointment Count</a></li>
+  <li><a href="#follow-ups-per-first" id="toc-follow-ups-per-first" class="nav-link" data-scroll-target="#follow-ups-per-first"><span class="header-section-number">1.4</span> Follow-ups per First</a></li>
+  <li><a href="#dna-count" id="toc-dna-count" class="nav-link" data-scroll-target="#dna-count"><span class="header-section-number">1.5</span> DNA Count</a></li>
+  <li><a href="#missed-appointment-rate" id="toc-missed-appointment-rate" class="nav-link" data-scroll-target="#missed-appointment-rate"><span class="header-section-number">1.6</span> Missed Appointment Rate</a></li>
+  <li><a href="#attended-face-to-face-count" id="toc-attended-face-to-face-count" class="nav-link" data-scroll-target="#attended-face-to-face-count"><span class="header-section-number">1.7</span> Attended Face to Face Count</a></li>
+  <li><a href="#attended-non-face-to-face-count" id="toc-attended-non-face-to-face-count" class="nav-link" data-scroll-target="#attended-non-face-to-face-count"><span class="header-section-number">1.8</span> Attended Non Face to Face Count</a></li>
+  <li><a href="#proportion-of-remote-attendances" id="toc-proportion-of-remote-attendances" class="nav-link" data-scroll-target="#proportion-of-remote-attendances"><span class="header-section-number">1.9</span> Proportion of Remote Attendances</a></li>
+  <li><a href="#discharged-count" id="toc-discharged-count" class="nav-link" data-scroll-target="#discharged-count"><span class="header-section-number">1.10</span> Discharged Count</a></li>
+  <li><a href="#appointments-ending-in-discharge" id="toc-appointments-ending-in-discharge" class="nav-link" data-scroll-target="#appointments-ending-in-discharge"><span class="header-section-number">1.11</span> Appointments Ending in Discharge</a></li>
+  <li><a href="#uncancelled-appointment-count" id="toc-uncancelled-appointment-count" class="nav-link" data-scroll-target="#uncancelled-appointment-count"><span class="header-section-number">1.12</span> Uncancelled Appointment Count</a></li>
+  </ul></li>
+  <li><a href="#pifu-measures" id="toc-pifu-measures" class="nav-link" data-scroll-target="#pifu-measures"><span class="header-section-number">2</span> PIFU measures</a>
+  <ul>
+  <li><a href="#moved-and-discharged-to-pifu-count" id="toc-moved-and-discharged-to-pifu-count" class="nav-link" data-scroll-target="#moved-and-discharged-to-pifu-count"><span class="header-section-number">2.1</span> Moved and Discharged to PIFU Count</a></li>
+  <li><a href="#pifu-utilisation-rate" id="toc-pifu-utilisation-rate" class="nav-link" data-scroll-target="#pifu-utilisation-rate"><span class="header-section-number">2.2</span> PIFU Utilisation Rate</a></li>
+  </ul></li>
+  <li><a href="#specialist-advice-measures" id="toc-specialist-advice-measures" class="nav-link" data-scroll-target="#specialist-advice-measures"><span class="header-section-number">3</span> Specialist advice measures</a>
+  <ul>
+  <li><a href="#pre-referral-request-count-post-referral-request-count" id="toc-pre-referral-request-count-post-referral-request-count" class="nav-link" data-scroll-target="#pre-referral-request-count-post-referral-request-count"><span class="header-section-number">3.1</span> Pre-Referral Request Count / Post-Referral Request Count</a></li>
+  <li><a href="#total-referral-requests" id="toc-total-referral-requests" class="nav-link" data-scroll-target="#total-referral-requests"><span class="header-section-number">3.2</span> Total Referral Requests</a></li>
+  <li><a href="#pre-referral-processed-count-post-referral-processed-count" id="toc-pre-referral-processed-count-post-referral-processed-count" class="nav-link" data-scroll-target="#pre-referral-processed-count-post-referral-processed-count"><span class="header-section-number">3.3</span> Pre-Referral Processed Count / Post-Referral Processed Count</a></li>
+  <li><a href="#total-processed-count" id="toc-total-processed-count" class="nav-link" data-scroll-target="#total-processed-count"><span class="header-section-number">3.4</span> Total Processed Count</a></li>
+  <li><a href="#pre-referral-diversions-count-post-referral-diversions-count" id="toc-pre-referral-diversions-count-post-referral-diversions-count" class="nav-link" data-scroll-target="#pre-referral-diversions-count-post-referral-diversions-count"><span class="header-section-number">3.5</span> Pre-Referral Diversions Count / Post-Referral Diversions Count</a></li>
+  <li><a href="#total-referral-diversions" id="toc-total-referral-diversions" class="nav-link" data-scroll-target="#total-referral-diversions"><span class="header-section-number">3.6</span> Total Referral Diversions</a></li>
+  <li><a href="#pre-referral-diversion-rate-post-referral-diversion-rate" id="toc-pre-referral-diversion-rate-post-referral-diversion-rate" class="nav-link" data-scroll-target="#pre-referral-diversion-rate-post-referral-diversion-rate"><span class="header-section-number">3.7</span> Pre-Referral Diversion Rate / Post-Referral Diversion Rate</a></li>
+  <li><a href="#overall-sa-diversion-rate" id="toc-overall-sa-diversion-rate" class="nav-link" data-scroll-target="#overall-sa-diversion-rate"><span class="header-section-number">3.8</span> Overall SA Diversion Rate</a></li>
+  <li><a href="#overall-sa-utilisation-rate" id="toc-overall-sa-utilisation-rate" class="nav-link" data-scroll-target="#overall-sa-utilisation-rate"><span class="header-section-number">3.9</span> Overall SA Utilisation Rate</a></li>
+  <li><a href="#pre-referral-utilisation-rate-post-referral-utilisation-rate" id="toc-pre-referral-utilisation-rate-post-referral-utilisation-rate" class="nav-link" data-scroll-target="#pre-referral-utilisation-rate-post-referral-utilisation-rate"><span class="header-section-number">3.10</span> Pre-Referral Utilisation Rate / Post-Referral Utilisation Rate</a></li>
+  </ul></li>
+  <li><a href="#e-referral-measures" id="toc-e-referral-measures" class="nav-link" data-scroll-target="#e-referral-measures"><span class="header-section-number">4</span> e-Referral measures</a>
+  <ul>
+  <li><a href="#ag-received-count" id="toc-ag-received-count" class="nav-link" data-scroll-target="#ag-received-count"><span class="header-section-number">4.1</span> A&amp;G Received Count</a></li>
+  <li><a href="#ag-response-count" id="toc-ag-response-count" class="nav-link" data-scroll-target="#ag-response-count"><span class="header-section-number">4.2</span> A&amp;G Response Count</a></li>
+  <li><a href="#ag-returned-with-advice-count" id="toc-ag-returned-with-advice-count" class="nav-link" data-scroll-target="#ag-returned-with-advice-count"><span class="header-section-number">4.3</span> A&amp;G Returned With Advice Count</a></li>
+  <li><a href="#ag-converted-to-referral-count" id="toc-ag-converted-to-referral-count" class="nav-link" data-scroll-target="#ag-converted-to-referral-count"><span class="header-section-number">4.4</span> A&amp;G Converted to Referral Count</a></li>
+  <li><a href="#e-referral-accepted-count" id="toc-e-referral-accepted-count" class="nav-link" data-scroll-target="#e-referral-accepted-count"><span class="header-section-number">4.5</span> E-Referral Accepted Count</a></li>
+  <li><a href="#e-referral-rejected-count" id="toc-e-referral-rejected-count" class="nav-link" data-scroll-target="#e-referral-rejected-count"><span class="header-section-number">4.6</span> E-Referral Rejected Count</a></li>
+  <li><a href="#asi-count" id="toc-asi-count" class="nav-link" data-scroll-target="#asi-count"><span class="header-section-number">4.7</span> ASI Count</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -135,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Planned Care Outpatient Activity Dashboard — User Guide</h1>
+<h1 class="title">Measures</h1>
 </div>
 
 
@@ -152,16 +193,146 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-this-tool" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> What is this tool?</h1>
-<p>This dashboard brings together information about outpatient activity across the NHS South East region. It draws on data submitted by hospital providers and covers things like the number of appointments taking place, how many are attended, missed, or delivered remotely, and how specialist advice requests are being used. The tool is intended to help you explore activity patterns quickly — by organisation, by specialty, or over time — without needing to request a bespoke report. A few things worth knowing before you start:</p>
-<p>The data is updated monthly. There are two versions of each month’s data: a live figure (more recent but subject to change) and a stable figure (slightly older but finalised). Most pages use the stable figure by default, and this is noted where relevant. The tool covers activity that has already taken place. It does not include plans, targets, or projections. Most pages exclude a specific type of activity — diagnostic medicine (coded as TFC 812) — from the main figures. This is standard practice and is noted where it applies. If you are unsure what a term means, there is a glossary at the end of this guide.</p>
+<section id="outpatient-activity-sus-measures" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Outpatient activity (SUS) measures</h1>
+<section id="attended-count" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="attended-count"><span class="header-section-number">1.1</span> Attended count</h2>
+<p>The number of outpatient appointments that patients attended, whether in person or remotely. Does not include activity where the patient was not present.</p>
 </section>
-<section id="what-do-the-measures-show" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> What do the measures show?</h1>
-<p>Pages have different measures available, the following sections on measures give a listing of what is available in the tool as a whole, and what it represents. To see which measures are available on individual pages please refer to the section describing each page of the tool.</p>
+<section id="attended-first-appointment-count" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="attended-first-appointment-count"><span class="header-section-number">1.2</span> Attended First Appointment Count</h2>
+<p>The number of appointments that were a patient’s first, or only, appointment in a series, limited to appointments where the patient attended in time to be seen</p>
+</section>
+<section id="attended-follow-up-appointment-count" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="attended-follow-up-appointment-count"><span class="header-section-number">1.3</span> Attended Follow Up Appointment Count</h2>
+<p>The number of appointments for patients attending following a first attendance or period of hospitalisation, limited to appointments where the patient attended in time to be seen.</p>
+</section>
+<section id="follow-ups-per-first" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="follow-ups-per-first"><span class="header-section-number">1.4</span> Follow-ups per First</h2>
+<p>The ratio of attended follow-up appointments to attended first appointments. For example, a value of 2.5 means there are 2.5 follow-up appointments for every new patient seen.</p>
+</section>
+<section id="dna-count" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="dna-count"><span class="header-section-number">1.5</span> DNA Count</h2>
+<p>The number of appointments that patients did not attend and did not cancel in advance.</p>
+</section>
+<section id="missed-appointment-rate" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="missed-appointment-rate"><span class="header-section-number">1.6</span> Missed Appointment Rate</h2>
+<p>The proportion of appointments that were missed (DNA) out of all appointments that should have taken place (attended plus missed, excluding those cancelled in advance).</p>
+</section>
+<section id="attended-face-to-face-count" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="attended-face-to-face-count"><span class="header-section-number">1.7</span> Attended Face to Face Count</h2>
+<p>The number of attended appointments delivered in person at a clinic or hospital site, limited to appointments where the patient attended in time to be seen</p>
+</section>
+<section id="attended-non-face-to-face-count" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="attended-non-face-to-face-count"><span class="header-section-number">1.8</span> Attended Non Face to Face Count</h2>
+<p>The number of attended appointments delivered remotely, for example by telephone or video, limited to appointments where the patient attended in time for the appointment to take place</p>
+</section>
+<section id="proportion-of-remote-attendances" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="proportion-of-remote-attendances"><span class="header-section-number">1.9</span> Proportion of Remote Attendances</h2>
+<p>The share of attended appointments that were delivered non-face-to-face.</p>
+</section>
+<section id="discharged-count" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="discharged-count"><span class="header-section-number">1.10</span> Discharged Count</h2>
+<p>The number of appointments where the recorded outcome was that the patient was discharged from the service — meaning they do not have a further follow-up booked through that referral.</p>
+</section>
+<section id="appointments-ending-in-discharge" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="appointments-ending-in-discharge"><span class="header-section-number">1.11</span> Appointments Ending in Discharge</h2>
+<p>The proportion of attended appointments where the outcome was discharge.</p>
+</section>
+<section id="uncancelled-appointment-count" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="uncancelled-appointment-count"><span class="header-section-number">1.12</span> Uncancelled Appointment Count</h2>
+<p>The total number of appointments that were either attended or missed without prior cancellation.</p>
+</section>
+</section>
+<section id="pifu-measures" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> PIFU measures</h1>
+<p>PIFU (Patient Initiated Follow-Up) data is reported by providers through the EROC data collection.</p>
+<section id="moved-and-discharged-to-pifu-count" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="moved-and-discharged-to-pifu-count"><span class="header-section-number">2.1</span> Moved and Discharged to PIFU Count</h2>
+<p>The number of patients who were either moved onto or discharged to a PIFU pathway during the period. This means they have been taken off a regular follow-up schedule and given the ability to re-book themselves if needed.</p>
+</section>
+<section id="pifu-utilisation-rate" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="pifu-utilisation-rate"><span class="header-section-number">2.2</span> PIFU Utilisation Rate</h2>
+<p>The proportion of eligible attended first appointments where the patient was subsequently moved to or discharged onto a PIFU pathway. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity.</p>
+</section>
+</section>
+<section id="specialist-advice-measures" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Specialist advice measures</h1>
+<p>These measures relate to the Advice and Guidance (A&amp;G) process, where referrers request specialist input before or after making a referral. Requests are split into pre-referral (advice before a referral is made) and post-referral (advice after a referral has already been submitted).</p>
+<section id="pre-referral-request-count-post-referral-request-count" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="pre-referral-request-count-post-referral-request-count"><span class="header-section-number">3.1</span> Pre-Referral Request Count / Post-Referral Request Count</h2>
+<p>The total number of specialist advice requests received, split by whether they were made before or after referral. The combined total is shown in Total Referral Requests.</p>
+</section>
+<section id="total-referral-requests" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="total-referral-requests"><span class="header-section-number">3.2</span> Total Referral Requests</h2>
+<p>The total number of specialist advice requests received, regardless of whether they were pre- or post-referral.</p>
+</section>
+<section id="pre-referral-processed-count-post-referral-processed-count" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="pre-referral-processed-count-post-referral-processed-count"><span class="header-section-number">3.3</span> Pre-Referral Processed Count / Post-Referral Processed Count</h2>
+<p>The number of requests that have been completed and closed — meaning the specialist has responded and the request is no longer open. Requests that are still open or ongoing are not included.</p>
+</section>
+<section id="total-processed-count" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="total-processed-count"><span class="header-section-number">3.4</span> Total Processed Count</h2>
+<p>The combined total of all closed specialist advice requests, regardless of pre- or post-referral status.</p>
+</section>
+<section id="pre-referral-diversions-count-post-referral-diversions-count" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="pre-referral-diversions-count-post-referral-diversions-count"><span class="header-section-number">3.5</span> Pre-Referral Diversions Count / Post-Referral Diversions Count</h2>
+<p>The number of processed requests where the outcome was that the patient was returned to their referrer with advice.</p>
+</section>
+<section id="total-referral-diversions" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="total-referral-diversions"><span class="header-section-number">3.6</span> Total Referral Diversions</h2>
+<p>The combined total of all diversions, regardless of pre- or post-referral status.</p>
+</section>
+<section id="pre-referral-diversion-rate-post-referral-diversion-rate" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="pre-referral-diversion-rate-post-referral-diversion-rate"><span class="header-section-number">3.7</span> Pre-Referral Diversion Rate / Post-Referral Diversion Rate</h2>
+<p>The proportion of requests that resulted in a diversion, out of all requests submitted. Expressed as a percentage.</p>
+</section>
+<section id="overall-sa-diversion-rate" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="overall-sa-diversion-rate"><span class="header-section-number">3.8</span> Overall SA Diversion Rate</h2>
+<p>The diversion rate across all specialist advice requests combined, regardless of pre- or post-referral status.</p>
+</section>
+<section id="overall-sa-utilisation-rate" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="overall-sa-utilisation-rate"><span class="header-section-number">3.9</span> Overall SA Utilisation Rate</h2>
+<p>The proportion of eligible first outpatient appointments where a specialist advice request had been submitted beforehand. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity, and is the same denominator used for the pre- and post-referral utilisation rates.</p>
+</section>
+<section id="pre-referral-utilisation-rate-post-referral-utilisation-rate" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="pre-referral-utilisation-rate-post-referral-utilisation-rate"><span class="header-section-number">3.10</span> Pre-Referral Utilisation Rate / Post-Referral Utilisation Rate</h2>
+<p>The utilisation rate broken down by whether the request was made before or after referral, using the same denominator as the overall rate.</p>
+</section>
+</section>
+<section id="e-referral-measures" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> e-Referral measures</h1>
+<p>These measures are drawn from the NHS e-Referral Service and relate to the electronic management of referrals and advice requests.</p>
+<section id="ag-received-count" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="ag-received-count"><span class="header-section-number">4.1</span> A&amp;G Received Count</h2>
+<p>The number of Advice and Guidance requests received by a provider through the e-Referral Service.</p>
+</section>
+<section id="ag-response-count" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="ag-response-count"><span class="header-section-number">4.2</span> A&amp;G Response Count</h2>
+<p>The number of responses to Advice and Guidance requests submitted by a provider. Comparing this to the received count gives an indication of how quickly or completely requests are being answered.</p>
+</section>
+<section id="ag-returned-with-advice-count" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="ag-returned-with-advice-count"><span class="header-section-number">4.3</span> A&amp;G Returned With Advice Count</h2>
+<p>The number of A&amp;G requests where the provider returned the request to the referrer with advice, rather than converting it to a referral. This is equivalent to a diversion in the EROC-based measures.</p>
+</section>
+<section id="ag-converted-to-referral-count" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="ag-converted-to-referral-count"><span class="header-section-number">4.4</span> A&amp;G Converted to Referral Count</h2>
+<p>The number of A&amp;G requests that were converted into a full referral — either by the provider or by the referrer following the specialist’s advice. This represents requests where the advice pathway concluded that a referral was appropriate.</p>
+</section>
+<section id="e-referral-accepted-count" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="e-referral-accepted-count"><span class="header-section-number">4.5</span> E-Referral Accepted Count</h2>
+<p>The number of referrals accepted by the receiving organisation through the e-Referral Service.</p>
+</section>
+<section id="e-referral-rejected-count" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="e-referral-rejected-count"><span class="header-section-number">4.6</span> E-Referral Rejected Count</h2>
+<p>The number of referrals rejected by the receiving organisation.</p>
+</section>
+<section id="asi-count" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="asi-count"><span class="header-section-number">4.7</span> ASI Count</h2>
+<p>The number of referrals that encountered an Appointment Slot Issue — meaning the patient could not be offered an appointment through the e-Referral system, typically because no slots were available.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
