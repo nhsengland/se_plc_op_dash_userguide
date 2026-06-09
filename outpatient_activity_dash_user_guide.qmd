@@ -55,7 +55,7 @@ As Face to Face count, limited to appointments where the patient attended in tim
 ### Non Face to Face Count
 The number of attended appointments delivered remotely, for example by telephone or video.
 
-### Attended Face to Face Count
+### Attended Non Face to Face Count
 As Non Face to Face count, limited to appointments where the patient attended in time for the appointment to take place
 
 ### Proportion of Remote Attendances
@@ -186,7 +186,8 @@ This page uses stable, finalised data only. The most recent one or two months ma
 
 #### What this page is for
 Use this page when you want to see how the providers within an ICB compare to each other over time for a chosen measure. Rather than looking at one organisation, this page splits activity out by provider so you can see who is contributing what to the overall picture.
-Setting your filters
+
+#### Setting your filters
 Select the ICB you want to focus on. You can then select a Treatment Function to narrow to a specialty if needed. Choose the metric you want to compare across providers.
 
 #### What you are looking at
@@ -473,3 +474,4 @@ The treatment function code for diagnostic medicine. This is routinely excluded 
 ## Version History
 
 - 0.1 2026-06-05 John Cusack: Initial draft
+- 0.2 2026-06-08 John Cusack: Removed from dashboard repo, set up as standalone project to allow for publication on github pages
