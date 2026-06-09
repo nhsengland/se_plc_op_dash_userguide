@@ -1,0 +1,17 @@
+---
+title: "Planned Care Outpatient Activity Dashboard — User Guide"
+---
+
+# What is this tool?
+This dashboard brings together information about outpatient activity across the NHS South East region. It draws on data submitted by hospital providers and covers things like the number of appointments taking place, how many are attended, missed, or delivered remotely, and how specialist advice requests are being used.
+The tool is intended to help you explore activity patterns quickly — by organisation, by specialty, or over time — without needing to request a bespoke report.
+A few things worth knowing before you start:
+
+The data is updated monthly. There are two versions of each month's data: a live figure (more recent but subject to change) and a stable figure (slightly older but finalised). Most pages use the stable figure by default, and this is noted where relevant.
+The tool covers activity that has already taken place. It does not include plans, targets, or projections.
+Most pages exclude a specific type of activity — diagnostic medicine (coded as TFC 812) — from the main figures. This is standard practice and is noted where it applies.
+If you are unsure what a term means, there is a glossary at the end of this guide.
+
+# What do the measures show?
+
+Pages have different measures available, the following sections on measures give a listing of what is available in the tool as a whole, and what it represents. To see which measures are available on individual pages please refer to the section describing each page of the tool.

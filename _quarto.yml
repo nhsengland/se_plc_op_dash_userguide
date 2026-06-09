@@ -10,6 +10,10 @@ website:
 
 format:
   html:
+    theme:
+      light: cosmo
+      dark: darkly
+    respect-user-color-scheme: true
     toc: true
     toc-depth: 4
     toc-location: left

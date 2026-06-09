@@ -1,0 +1,50 @@
+---
+title: "Glossary"
+format: html
+---
+
+## Acute trust
+A hospital organisation providing secondary care services, as distinct from primary care (GP practices) or community services.
+
+## A&G / Specialist advice — Advice and Guidance. 
+A process by which a GP or other referrer can request clinical advice from a specialist without necessarily making a full referral. Requests can be pre-referral (before a patient is referred) or post-referral (after).
+
+## Attended appointment
+An appointment that the patient attended, whether face to face or remotely.
+
+## Diversion rate 
+The proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.
+
+## DNA 
+Did Not Attend. An appointment the patient missed without cancelling.
+
+## eRS / e-Referral Service 
+The NHS system used to manage referrals electronically between primary and secondary care.
+
+## EROC 
+Elective Recovery Outpatient Collection. A data submission collecting elective recovery activity. Split into provider submissions used in this tool for activity related to PIFU, and system submissions, used in this tool to give information about specialist advice activity 
+
+## ICB 
+Integrated Care Board. The organisation responsible for planning NHS services for a local population. 
+
+## Live / flex month 
+The most recent month of data available. These figures are provisional and may change as information can become available post submission and will be refined through subsequent submissions.
+
+## Missed appointment rate 
+The proportion of appointments that were not attended and not cancelled in advance. Calculated as DNAs divided by the total of attended and missed appointments.
+
+## PIFU 
+Patient Initiated Follow-Up. An arrangement where a patient is given the ability to access secondary care support if their condition changes, rather than being given a routine follow-up appointment.
+
+## Provider 
+In this context, an NHS organisation delivering hospital services, typically an acute trust.
+Stable / freeze month — a slightly earlier month of data that has been finalised and is no longer subject to change. Used as the primary reference point for benchmarking and comparison.
+
+## SUS 
+Secondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.
+
+## TFC 
+Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.
+
+## TFC 812 
+The treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.

@@ -1,0 +1,107 @@
+---
+title: "Measures"
+---
+
+# Outpatient activity (SUS) measures
+
+## Attended count
+The number of outpatient appointments that patients attended, whether in person or remotely. 
+
+## Attended First Appointment Count
+The number of appointments that were a patient's first, or only, appointment in a series, limited to appointments where the patient attended in time to be seen 
+
+## Attended Follow Up Appointment Count
+The number of appointments for patients attending following a first attendance or period of hospitalisation, limited to appointments where the patient attended in time to be seen. 
+
+## Follow-ups per First
+The ratio of attended follow-up appointments to attended first appointments. For example, a value of 2.5 means there are 2.5 follow-up appointments for every new patient seen.
+
+## DNA Count
+The number of appointments that patients did not attend and did not cancel in advance. 
+
+## Missed Appointment Rate
+The proportion of appointments that were missed (DNA) out of all appointments that should have taken place (attended plus missed, excluding those cancelled in advance). 
+
+## Attended Face to Face Count
+The number of attended appointments delivered in person at a clinic or hospital site, limited to appointments where the patient attended in time to be seen
+
+## Attended Non Face to Face Count
+The number of attended appointments delivered remotely, for example by telephone or video, limited to appointments where the patient attended in time for the appointment to take place
+
+## Proportion of Remote Attendances
+The share of attended appointments that were delivered non-face-to-face. 
+
+## Discharged Count
+The number of appointments where the recorded outcome was that the patient was discharged from the service — meaning they do not have a further follow-up booked through that referral.
+
+## Appointments Ending in Discharge
+The proportion of attended appointments where the outcome was discharge. 
+
+## Uncancelled Appointment Count
+The total number of appointments that were either attended or missed without prior cancellation. 
+
+# PIFU measures
+PIFU (Patient Initiated Follow-Up) data is reported by providers through the EROC data collection.
+
+## Moved and Discharged to PIFU Count
+The number of patients who were either moved onto or discharged to a PIFU pathway during the period. This means they have been taken off a regular follow-up schedule and given the ability to re-book themselves if needed.
+
+## PIFU Utilisation Rate
+The proportion of eligible attended first appointments where the patient was subsequently moved to or discharged onto a PIFU pathway. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity.
+
+# Specialist advice measures
+These measures relate to the Advice and Guidance (A&G) process, where referrers request specialist input before or after making a referral. Requests are split into pre-referral (advice before a referral is made) and post-referral (advice after a referral has already been submitted).
+
+## Pre-Referral Request Count / Post-Referral Request Count
+The total number of specialist advice requests received, split by whether they were made before or after referral. The combined total is shown in Total Referral Requests.
+
+## Total Referral Requests
+The total number of specialist advice requests received, regardless of whether they were pre- or post-referral.
+
+## Pre-Referral Processed Count / Post-Referral Processed Count
+The number of requests that have been completed and closed — meaning the specialist has responded and the request is no longer open. Requests that are still open or ongoing are not included.
+
+## Total Processed Count
+The combined total of all closed specialist advice requests, regardless of pre- or post-referral status.
+
+## Pre-Referral Diversions Count / Post-Referral Diversions Count
+The number of processed requests where the outcome was that the patient was returned to their referrer with advice.
+
+## Total Referral Diversions
+The combined total of all diversions, regardless of pre- or post-referral status.
+
+## Pre-Referral Diversion Rate / Post-Referral Diversion Rate
+The proportion of requests that resulted in a diversion, out of all requests submitted. Expressed as a percentage. 
+
+## Overall SA Diversion Rate
+The diversion rate across all specialist advice requests combined, regardless of pre- or post-referral status.
+
+## Overall SA Utilisation Rate
+The proportion of eligible first outpatient appointments where a specialist advice request had been submitted beforehand. The denominator is a defined set of attended NHS-funded first appointments, excluding diagnostic medicine activity, and is the same denominator used for the pre- and post-referral utilisation rates.
+
+## Pre-Referral Utilisation Rate / Post-Referral Utilisation Rate
+The utilisation rate broken down by whether the request was made before or after referral, using the same denominator as the overall rate.
+
+# e-Referral measures
+These measures are drawn from the NHS e-Referral Service and relate to the electronic management of referrals and advice requests.
+
+## A&G Received Count
+The number of Advice and Guidance requests received by a provider through the e-Referral Service.
+
+## A&G Response Count
+The number of responses to Advice and Guidance requests submitted by a provider. Comparing this to the received count gives an indication of how quickly or completely requests are being answered.
+
+## A&G Returned With Advice Count
+The number of A&G requests where the provider returned the request to the referrer with advice, rather than converting it to a referral. This is equivalent to a diversion in the EROC-based measures.
+
+## A&G Converted to Referral Count
+The number of A&G requests that were converted into a full referral — either by the provider or by the referrer following the specialist's advice. This represents requests where the advice pathway concluded that a referral was appropriate.
+
+## E-Referral Accepted Count
+The number of referrals accepted by the receiving organisation through the e-Referral Service.
+
+## E-Referral Rejected Count
+The number of referrals rejected by the receiving organisation. 
+
+## ASI Count
+The number of referrals that encountered an Appointment Slot Issue — meaning the patient could not be offered an appointment through the e-Referral system, typically because no slots were available.
