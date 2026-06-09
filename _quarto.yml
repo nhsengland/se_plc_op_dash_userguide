@@ -7,7 +7,7 @@ project:
 
 website:
   title: South East Outpatient Activity Dashboard Userguide
-  navbar:
+  sidebar:
     left:
       - href: index.qmd
         text: Home
@@ -25,7 +25,7 @@ format:
     respect-user-color-scheme: true
     toc: true
     toc-depth: 4
-    toc-location: left
+    toc-location: right
     toc-float: true
     page-layout: full
     number-sections: true
