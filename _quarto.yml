@@ -20,7 +20,7 @@ website:
 format:
   html:
     theme:
-      light: cosmo
+      light: [cosmo, custom_light.scss]
       dark: darkly
     respect-user-color-scheme: true
     toc: true
