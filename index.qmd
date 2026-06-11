@@ -5,12 +5,21 @@ title: "Planned Care Outpatient Activity Dashboard — User Guide"
 # What is this tool?
 This dashboard brings together information about outpatient activity across the NHS South East region. It draws on data submitted by hospital providers and covers things like the number of appointments taking place, how many are attended, missed, or delivered remotely, and how specialist advice requests are being used.
 The tool is intended to help you explore activity patterns quickly — by organisation, by specialty, or over time — without needing to request a bespoke report.
+
 A few things worth knowing before you start:
 
 The data is updated monthly. There are two versions of each month's data: a live figure (more recent but subject to change) and a stable figure (slightly older but finalised). Most pages use the stable figure by default, and this is noted where relevant.
 The tool covers activity that has already taken place. It does not include plans, targets, or projections.
 Most pages exclude a specific type of activity — diagnostic medicine (coded as TFC 812) — from the main figures. This is standard practice and is noted where it applies.
 If you are unsure what a term means, there is a glossary at the end of this guide.
+
+# What doesn't the tool do?
+
+At this time, this tool is limited to NHS acute hospital provider activity in the South East region. It does not include activity for NHS community health provider trusts, NHS mental health provider trusts, or independent sector providers.
+
+The tool does not hold targets, projections or goals; it is not designed to support time-limited initiatives like monitoring annual plans or tracking individual sprints
+
+It is intended to be a companion tool to the existing Waiting List dashboard and shows elements of the pathway that are not covered there. Therefore, contains data from e-referrals systems (ERS), system EROC (A&G data), outpatient SUS, and provider EROC (PIFU data). It does not contain RTT or Waiting List Minimum Dataset data.
 
 # What do the measures show?
 
