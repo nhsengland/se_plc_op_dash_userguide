@@ -424,7 +424,7 @@
     "href": "glossary.html",
     "title": "Glossary",
     "section": "",
-    "text": "A hospital organisation providing secondary care services, as distinct from primary care (GP practices) or community services.",
+    "text": "A hospital organisation providing secondary care services, as distinct from primary care (GP practices) or community services.\n\n\n\nA process by which a GP or other referrer can request clinical advice from a specialist without necessarily making a full referral. Requests can be pre-referral (before a patient is referred) or post-referral (after).\n\n\n\nAn appointment that the patient attended, whether face to face or remotely.\n\n\n\n“Appointment Slot Issue” - a term related to the electronic referrals service. An ASI takes place when an attempt is made to book a patient into a clinic that has no available slots. This most commonly triggers the “defer to provider” which transfers the booking responsibility from the referrer back to the service provider.\n\n\n\nThe proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.\n\n\n\nDid Not Attend. An appointment the patient missed without cancelling.\n\n\n\nThe NHS system used to manage referrals electronically between primary and secondary care.\n\n\n\nElective Recovery Outpatient Collection. A data submission collecting elective recovery activity. Split into provider submissions used in this tool for activity related to PIFU, and system submissions, used in this tool to give information about specialist advice activity\n\n\n\nIntegrated Care Board. The organisation responsible for planning NHS services for a local population.\n\n\n\nThe most recent month of data available. These figures are provisional and may change as information can become available post submission and will be refined through subsequent submissions.\n\n\n\nThe proportion of appointments that were not attended and not cancelled in advance. Calculated as DNAs divided by the total of attended and missed appointments.\n\n\n\nPatient Initiated Follow-Up. An arrangement where a patient is given the ability to access secondary care support if their condition changes, rather than being given a routine follow-up appointment.\n\n\n\nIn this context, an NHS organisation delivering hospital services, typically an acute trust. Stable / freeze month — a slightly earlier month of data that has been finalised and is no longer subject to change. Used as the primary reference point for benchmarking and comparison.\n\n\n\nThe calendar month immediately prior to the live/flex month. Data from this period onwards is typically more stable and complete than the data available for the live/flex month. Changes can still be made to data for this period, but it tends to be less common, and updates are often smaller.\n\n\n\nSecondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.\n\n\n\nTreatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.\n\n\n\nThe treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.",
     "crumbs": [
       "Glossary"
     ]
@@ -443,8 +443,8 @@
     "objectID": "glossary.html#ag-specialist-advice-advice-and-guidance.",
     "href": "glossary.html#ag-specialist-advice-advice-and-guidance.",
     "title": "Glossary",
-    "section": "2 A&G / Specialist advice — Advice and Guidance.",
-    "text": "2 A&G / Specialist advice — Advice and Guidance.\nA process by which a GP or other referrer can request clinical advice from a specialist without necessarily making a full referral. Requests can be pre-referral (before a patient is referred) or post-referral (after).",
+    "section": "",
+    "text": "A process by which a GP or other referrer can request clinical advice from a specialist without necessarily making a full referral. Requests can be pre-referral (before a patient is referred) or post-referral (after).",
     "crumbs": [
       "Glossary"
     ]
@@ -453,8 +453,8 @@
     "objectID": "glossary.html#attended-appointment",
     "href": "glossary.html#attended-appointment",
     "title": "Glossary",
-    "section": "3 Attended appointment",
-    "text": "3 Attended appointment\nAn appointment that the patient attended, whether face to face or remotely.",
+    "section": "",
+    "text": "An appointment that the patient attended, whether face to face or remotely.",
     "crumbs": [
       "Glossary"
     ]
@@ -463,8 +463,8 @@
     "objectID": "glossary.html#asi",
     "href": "glossary.html#asi",
     "title": "Glossary",
-    "section": "4 ASI",
-    "text": "4 ASI\n“Appointment Slot Issue” - a term related to the electronic referrals service. An ASI takes place when an attempt is made to book a patient into a clinic that has no available slots. This most commonly triggers the “defer to provider” which transfers the booking responsibility from the referrer back to the service provider.",
+    "section": "",
+    "text": "“Appointment Slot Issue” - a term related to the electronic referrals service. An ASI takes place when an attempt is made to book a patient into a clinic that has no available slots. This most commonly triggers the “defer to provider” which transfers the booking responsibility from the referrer back to the service provider.",
     "crumbs": [
       "Glossary"
     ]
@@ -473,8 +473,8 @@
     "objectID": "glossary.html#diversion-rate",
     "href": "glossary.html#diversion-rate",
     "title": "Glossary",
-    "section": "5 Diversion rate",
-    "text": "5 Diversion rate\nThe proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.",
+    "section": "",
+    "text": "The proportion of specialist advice requests that resulted in the patient being returned to their referrer with advice, rather than proceeding to a referral. A higher rate suggests the advice service is successfully avoiding unnecessary referrals.",
     "crumbs": [
       "Glossary"
     ]
@@ -483,8 +483,8 @@
     "objectID": "glossary.html#dna",
     "href": "glossary.html#dna",
     "title": "Glossary",
-    "section": "6 DNA",
-    "text": "6 DNA\nDid Not Attend. An appointment the patient missed without cancelling.",
+    "section": "",
+    "text": "Did Not Attend. An appointment the patient missed without cancelling.",
     "crumbs": [
       "Glossary"
     ]
@@ -493,8 +493,8 @@
     "objectID": "glossary.html#ers-e-referral-service",
     "href": "glossary.html#ers-e-referral-service",
     "title": "Glossary",
-    "section": "7 eRS / e-Referral Service",
-    "text": "7 eRS / e-Referral Service\nThe NHS system used to manage referrals electronically between primary and secondary care.",
+    "section": "",
+    "text": "The NHS system used to manage referrals electronically between primary and secondary care.",
     "crumbs": [
       "Glossary"
     ]
@@ -503,8 +503,8 @@
     "objectID": "glossary.html#eroc",
     "href": "glossary.html#eroc",
     "title": "Glossary",
-    "section": "8 EROC",
-    "text": "8 EROC\nElective Recovery Outpatient Collection. A data submission collecting elective recovery activity. Split into provider submissions used in this tool for activity related to PIFU, and system submissions, used in this tool to give information about specialist advice activity",
+    "section": "",
+    "text": "Elective Recovery Outpatient Collection. A data submission collecting elective recovery activity. Split into provider submissions used in this tool for activity related to PIFU, and system submissions, used in this tool to give information about specialist advice activity",
     "crumbs": [
       "Glossary"
     ]
@@ -513,8 +513,8 @@
     "objectID": "glossary.html#icb",
     "href": "glossary.html#icb",
     "title": "Glossary",
-    "section": "9 ICB",
-    "text": "9 ICB\nIntegrated Care Board. The organisation responsible for planning NHS services for a local population.",
+    "section": "",
+    "text": "Integrated Care Board. The organisation responsible for planning NHS services for a local population.",
     "crumbs": [
       "Glossary"
     ]
@@ -523,8 +523,8 @@
     "objectID": "glossary.html#live-flex-month",
     "href": "glossary.html#live-flex-month",
     "title": "Glossary",
-    "section": "10 Live / flex month",
-    "text": "10 Live / flex month\nThe most recent month of data available. These figures are provisional and may change as information can become available post submission and will be refined through subsequent submissions.",
+    "section": "",
+    "text": "The most recent month of data available. These figures are provisional and may change as information can become available post submission and will be refined through subsequent submissions.",
     "crumbs": [
       "Glossary"
     ]
@@ -533,8 +533,8 @@
     "objectID": "glossary.html#missed-appointment-rate",
     "href": "glossary.html#missed-appointment-rate",
     "title": "Glossary",
-    "section": "11 Missed appointment rate",
-    "text": "11 Missed appointment rate\nThe proportion of appointments that were not attended and not cancelled in advance. Calculated as DNAs divided by the total of attended and missed appointments.",
+    "section": "",
+    "text": "The proportion of appointments that were not attended and not cancelled in advance. Calculated as DNAs divided by the total of attended and missed appointments.",
     "crumbs": [
       "Glossary"
     ]
@@ -543,8 +543,8 @@
     "objectID": "glossary.html#pifu",
     "href": "glossary.html#pifu",
     "title": "Glossary",
-    "section": "12 PIFU",
-    "text": "12 PIFU\nPatient Initiated Follow-Up. An arrangement where a patient is given the ability to access secondary care support if their condition changes, rather than being given a routine follow-up appointment.",
+    "section": "",
+    "text": "Patient Initiated Follow-Up. An arrangement where a patient is given the ability to access secondary care support if their condition changes, rather than being given a routine follow-up appointment.",
     "crumbs": [
       "Glossary"
     ]
@@ -553,8 +553,18 @@
     "objectID": "glossary.html#provider",
     "href": "glossary.html#provider",
     "title": "Glossary",
-    "section": "13 Provider",
-    "text": "13 Provider\nIn this context, an NHS organisation delivering hospital services, typically an acute trust. Stable / freeze month — a slightly earlier month of data that has been finalised and is no longer subject to change. Used as the primary reference point for benchmarking and comparison.",
+    "section": "",
+    "text": "In this context, an NHS organisation delivering hospital services, typically an acute trust. Stable / freeze month — a slightly earlier month of data that has been finalised and is no longer subject to change. Used as the primary reference point for benchmarking and comparison.",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#stable-freeze-month",
+    "href": "glossary.html#stable-freeze-month",
+    "title": "Glossary",
+    "section": "",
+    "text": "The calendar month immediately prior to the live/flex month. Data from this period onwards is typically more stable and complete than the data available for the live/flex month. Changes can still be made to data for this period, but it tends to be less common, and updates are often smaller.",
     "crumbs": [
       "Glossary"
     ]
@@ -563,8 +573,8 @@
     "objectID": "glossary.html#sus",
     "href": "glossary.html#sus",
     "title": "Glossary",
-    "section": "14 SUS",
-    "text": "14 SUS\nSecondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.",
+    "section": "",
+    "text": "Secondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.",
     "crumbs": [
       "Glossary"
     ]
@@ -573,8 +583,8 @@
     "objectID": "glossary.html#tfc",
     "href": "glossary.html#tfc",
     "title": "Glossary",
-    "section": "15 TFC",
-    "text": "15 TFC\nTreatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.",
+    "section": "",
+    "text": "Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.",
     "crumbs": [
       "Glossary"
     ]
@@ -583,8 +593,8 @@
     "objectID": "glossary.html#tfc-812",
     "href": "glossary.html#tfc-812",
     "title": "Glossary",
-    "section": "16 TFC 812",
-    "text": "16 TFC 812\nThe treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.",
+    "section": "",
+    "text": "The treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.",
     "crumbs": [
       "Glossary"
     ]
