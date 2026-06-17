@@ -165,6 +165,10 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#trust-short-names" id="toc-trust-short-names" class="nav-link" data-scroll-target="#trust-short-names"><span class="header-section-number">2</span> Trust short names</a></li>
   <li><a href="#icb-short-names" id="toc-icb-short-names" class="nav-link" data-scroll-target="#icb-short-names"><span class="header-section-number">3</span> ICB Short Names</a></li>
+  <li><a href="#treatment-functions" id="toc-treatment-functions" class="nav-link" data-scroll-target="#treatment-functions"><span class="header-section-number">4</span> Treatment Functions</a>
+  <ul>
+  <li><a href="#aligning-to-waiting-list-reporting" id="toc-aligning-to-waiting-list-reporting" class="nav-link" data-scroll-target="#aligning-to-waiting-list-reporting"><span class="header-section-number">4.1</span> Aligning to waiting list reporting</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -254,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tfc" class="level2" data-number="1.16">
 <h2 data-number="1.16" class="anchored" data-anchor-id="tfc"><span class="header-section-number">1.16</span> TFC</h2>
-<p>Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g.&nbsp;cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.</p>
+<p>Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g.&nbsp;cardiology, orthopaedics). Different data sources use slightly different coding systems a discussion of two different systems is available in the Treatment Function section of this page.</p>
 </section>
 <section id="tfc-812" class="level2" data-number="1.17">
 <h2 data-number="1.17" class="anchored" data-anchor-id="tfc-812"><span class="header-section-number">1.17</span> TFC 812</h2>
@@ -376,8 +380,48 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="treatment-functions" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Treatment Functions</h1>
+<p>A treatment function is a “division of clinical work based on the main specialty, but incorporating approved sub-specialities and treatment interests used by lead care professionals including consultants.”</p>
+<p>In other words a treatment function is a broad grouping used to describe the type of speciality responsible for a the patient’s care.</p>
+<p>The list of specialities is aligned to the specialties recognised by the Royal Colleges and Faculties and the General Dental Council. The full list of treatment function codes is available in the <a href="https://www.datadictionary.nhs.uk/supporting_information/main_specialty_and_treatment_function_codes_table.html">relevant NHS Data Dictionary page</a></p>
+<section id="aligning-to-waiting-list-reporting" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="aligning-to-waiting-list-reporting"><span class="header-section-number">4.1</span> Aligning to waiting list reporting</h2>
+<p>When reporting activity related to referral to treatment pathways, providers report against 18 specific treatment function codes, and five general “other” categories.</p>
+<p>The 18 specific functions are:</p>
+<ul>
+<li>General Surgery Service</li>
+<li>Urology Service</li>
+<li>Trauma &amp; Orthopaedics Service</li>
+<li>Ear, Nose &amp; Throat Service</li>
+<li>Ophthalmology Service</li>
+<li>Oral Surgery Service</li>
+<li>Neurosurgery Service</li>
+<li>Plastic Surgery Service</li>
+<li>Cardiothoracic Surgery Service</li>
+<li>General Internal Medicine Service</li>
+<li>Gastroenterology Service</li>
+<li>Cardiology Service</li>
+<li>Dermatology Service</li>
+<li>Respiratory Medicine Service</li>
+<li>Neurology Service</li>
+<li>Rheumatology Service</li>
+<li>Elderly Medicine Service</li>
+<li>Gynaecology Service</li>
+</ul>
+<p>Any activity not related to these 18 specialities should be assigned to one of these five “other” treatment function subcategories:</p>
+<p>Other – Medical Services Other – Mental Health Services Other – Paediatric Services Other – Surgical Services Other – Other Services</p>
+<p>There are some exceptions where activity normally reported against a different treatment function may be may be aggregated into one of the 18 RTT specialities:</p>
+<ul>
+<li>Cardiothoracic Surgery, which can be either specialty 170 (Cardiothoracic) or an aggregation of 172 (Cardiac) and 173 (Thoracic)</li>
+<li>Spinal Surgery Service (108), Orthopaedic Service (111) and Trauma</li>
+<li>Surgery Service (115) should be included in Trauma and Orthopaedics (110)</li>
+<li>Oral and Maxillofacial Surgery (145) and Maxillofacial Surgery (144) should be included in Oral Surgery (140)</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -92,7 +92,7 @@ As with the Activity by Organisation page, only finalised data is shown here.
 Use this page when you want a snapshot of how all acute providers in the South East are performing across a standard set of measures in the most recent finalised month. This is the page to use if you want to identify which providers stand out — either as strong performers or as areas for follow-up.
 
 ## Setting your filters
-You can filter by Treatment Function, Age Group (children and young people, or adults), Appointment Priority, and whether the appointment involved a procedure. These filters apply across all the measures shown, so you can, for example, look at the benchmarking picture for adult cardiology appointments only.
+You can filter by Treatment Function (following the SUS/data dictionary definitions), Age Group (children and young people, or adults), Appointment Priority, and whether the appointment involved a procedure. These filters apply across all the measures shown, so you can, for example, look at the benchmarking picture for adult cardiology appointments only.
 
 ## What you are looking at
 A single table showing one row per provider, grouped by ICB. The columns show a standard set of measures:
@@ -113,7 +113,7 @@ This page only shows acute trust providers. It uses finalised data only. Diagnos
 # Benchmarking — Heat Map 
 
 ## What this page is for
-Use this page when you want to explore one benchmarking measure in detail across both providers and specialties at the same time. It is particularly useful for spotting whether a pattern at a provider is consistent across all their specialties, or concentrated in one area.
+Use this page when you want to explore one benchmarking measure in detail across both providers and the 18 RTT specialties at the same time. It is particularly useful for spotting whether a pattern at a provider is consistent across all their specialties, or concentrated in one area.
 
 ## Setting your filters
 Choose a single metric from the measure list — this controls what the table shows. You can also filter by Age Group, Appointment Priority, and procedure status.

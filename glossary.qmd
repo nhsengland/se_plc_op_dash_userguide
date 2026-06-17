@@ -51,7 +51,7 @@ The calendar month immediately prior to the live/flex month. Data from this peri
 Secondary Uses Service. Nationally submitted hospital activity data. The primary source for outpatient appointment counts in this tool.
 
 ## TFC 
-Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems; the tool handles these differences in the background.
+Treatment Function Code. A code identifying the clinical specialty under which an activity is recorded (e.g. cardiology, orthopaedics). Different data sources use slightly different coding systems a discussion of two different systems is available in the Treatment Function section of this page.
 
 ## TFC 812 
 The treatment function code for diagnostic medicine. This is routinely excluded from most measures in this tool as it represents a different type of activity to the outpatient appointments the tool is primarily designed to report on.
@@ -93,3 +93,51 @@ Surrey & Sussex ICS|NHS SURREY AND SUSSEX INTEGRATED CARE BOARD
 TV ICS|NHS THAMES VALLEY INTEGRATED CARE BOARD
 
 : {.striped .hover}
+
+# Treatment Functions
+
+A treatment function is a "division of clinical work based on the main specialty, but incorporating approved sub-specialities and treatment interests used by lead care professionals including consultants."
+
+In other words a treatment function is a broad grouping used to describe the type of speciality responsible for a the patient's care. 
+
+The list of specialities is aligned to the specialties recognised by the Royal Colleges and Faculties and the General Dental Council. The full list of treatment function codes is available in the [relevant NHS Data Dictionary page](https://www.datadictionary.nhs.uk/supporting_information/main_specialty_and_treatment_function_codes_table.html)
+
+## Aligning to waiting list reporting
+
+When reporting activity related to referral to treatment pathways, providers report against 18 specific treatment function codes, and five general "other" categories.
+
+The 18 specific functions are: 
+
+- General Surgery Service
+- Urology Service
+- Trauma & Orthopaedics Service 
+- Ear, Nose & Throat Service 
+- Ophthalmology Service 
+- Oral Surgery Service 
+- Neurosurgery Service 
+- Plastic Surgery Service 
+- Cardiothoracic Surgery Service 
+- General Internal Medicine Service 
+- Gastroenterology Service 
+- Cardiology Service 
+- Dermatology Service 
+- Respiratory Medicine Service 
+- Neurology Service
+- Rheumatology Service 
+- Elderly Medicine Service 
+- Gynaecology Service
+
+Any activity not related to these 18 specialities should be assigned to one of these five "other" treatment function subcategories:
+
+Other – Medical Services
+Other – Mental Health Services
+Other – Paediatric Services
+Other – Surgical Services
+Other – Other Services
+
+There are some exceptions where activity normally reported against a different treatment function may be may be aggregated into one of the 18 RTT specialities:
+
+- Cardiothoracic Surgery, which can be either specialty 170 (Cardiothoracic) or an aggregation of 172 (Cardiac) and 173 (Thoracic)
+- Spinal Surgery Service (108), Orthopaedic Service (111) and Trauma
+- Surgery Service (115) should be included in Trauma and Orthopaedics (110)
+- Oral and Maxillofacial Surgery (145) and Maxillofacial Surgery (144) should be included in Oral Surgery (140) 
